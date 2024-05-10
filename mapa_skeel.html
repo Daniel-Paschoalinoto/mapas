@@ -1,0 +1,47 @@
+MAPA SKEEL (entender se o campo total de anúncios site aparece em algum lugar ou será usada de forma interna)
+SKEEL:
+
+root:
+//*[contains(@class, 'vacancie-row-view')]
+
+titulo:
+//*[contains(@class, 'vacancie-title mb-2')]
+
+(.+Banco de currículos.+)|(.+banco de curriculos.+)|(.+baco de currículo.+)|(.+Banco de curriculo.+)|(.+banco de talentos.+)|(.+banco de talento.+)|(.+banco de Candidatos.+)|(.+banco de candidato.+)|(.+Banco de currículos)|(.+banco de curriculos)|(.+baco de currículo)|(.+Banco de curriculo)|(.+banco de talentos)|(.+banco de talento)|(.+banco de Candidatos)|(.+banco de candidato)|(Banco de currículos.+)|(banco de curriculos.+)|(baco de currículo.+)|(Banco de curriculo.+)|(banco de talentos.+)|(banco de talento.+)|(banco de Candidatos.+)|(banco de candidato.+)|(.+Banco de Currículos.+)|(.+VAGA BANCO.+)
+
+cidade:
+//*[contains(@class, 'city-span')]
+
+estado
+//*[contains(@class, 'city-span')]
+
+RegexMatch   -.+
+Replace   -   > 
+
+<button>teste</button>
+
+URL_DETALHE (click)
+//button[contains(text( ), 'Ver vaga')]
+
+Total anúncios site
+//span[contains(., 'Localizamos') and contains(., 'vaga')]
+
+
+DENTROOOOOOOOO
+Descrição
+//*[contains(text(),'Descrição')][1]/following-sibling::div[1]
+
+//*[contains(text(),'Atividades')][1]/following-sibling::div[1]
+Utilizar Atividades apenas caso em TODAS as vagas a empresa não deixe o campo extenso. Ou será cortado devido ao 'Ver mais'.
+
+Inserir
+Atuará nas atividades internas e demais funções pertinentes ao cargo. Necessário conhecimento na área de atuação.
+
+Salário (inserir campo e processadores mesmo que o campo não exista)
+(//*[contains(.,'SALÁRIO')]/following-sibling::div[1])[1]
+
+Replace   a   >   & (COM ESPAÇO ANTES E DEPOIS DO A)
+×SplitFirst   &  
+
+
+
