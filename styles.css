@@ -13,7 +13,7 @@ p {
     /* Adiciona espaço entre cada div */
 }
 
-#botaoCopiarXpath {
+#botaoCopiarXpath1 {
     background-color: #ffcc00;
     /* Define a cor de fundo como amarelo */
     color: #fff;
@@ -32,14 +32,14 @@ p {
     /* Adiciona uma sombra mais sutil ao redor do botão */
 }
 
-#botaoCopiarXpath:hover {
+#botaoCopiarXpath1:hover {
     background-color: #ffbb00;
     /* Altera a cor de fundo ao passar o mouse */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     /* Altera a sombra ao passar o mouse */
 }
 
-#botaoCopiarXpath:active {
+#botaoCopiarXpath1:active {
     background-color: #ffaa00;
     /* Altera a cor de fundo temporariamente quando clicado */
     box-shadow: none;
@@ -104,8 +104,6 @@ p {
     color: rgb(0, 0, 0);
     display: block;
     font-size: 18px;
-    /* Defina o tamanho da fonte como desejado */
-    /* Outros estilos desejados */
 }
 
 .xpath-expression {
@@ -136,8 +134,93 @@ p {
     display: none;
 }
 
+#retornoLista {
+    float: right;
+    text-decoration: none;
+    font-size: 18px; /* Altere o tamanho da fonte conforme necessário */
+    padding: 10px 20px; /* Ajuste o padding conforme necessário para aumentar a largura do botão */
+}
+
+
+#disponivel {
+    width: 150px;
+    background-color: #4CAF50;
+    /* Verde */
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    padding: 10px 20px;
+    /* Tamanho do botão */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#disponivel:hover {
+    background-color: #347a38;
+    /* Verde escuro no hover */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* Sombra no hover */
+}
+
+#disponivel:active {
+    background-color: #154f25;
+    /* Altera a cor de fundo temporariamente quando clicado */
+    box-shadow: none;
+    /* Remove a sombra quando clicado */
+}
+
+#indisponivel {
+    width: 150px;
+    background-color: #b4aaaa;
+    /* Verde */
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    padding: 10px 20px;
+    /* Tamanho do botão */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#indisponivel:hover {
+    background-color: #838483;
+    /* Verde escuro no hover */
+}
+
+#indisponivel:active {
+    background-color: #5c5c5d;
+    /* Altera a cor de fundo temporariamente quando clicado */
+    box-shadow: none;
+    /* Remove a sombra quando clicado */
+}
+
+.header-container {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.logo {
+    width: 60px; /* Define o tamanho da imagem */
+    height: auto; /* Mantém a proporção */
+    margin-right: 10px; /* Espaçamento entre a imagem e o texto */
+    margin-bottom: 5px;
+}
+
+h1 {
+    margin: 0; /* Limpa as margens padrão do h1 */
+    margin-bottom: 7px;
+}
 
 .button-container {
     text-align: center;
 }
-

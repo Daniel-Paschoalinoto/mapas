@@ -16,7 +16,7 @@
         <div id="root" class="conteudo">
             <span class="destaque">Root</span>
             <span class="xpath-expression1">//*[contains(@class, 'vacancie-row-view')]</span>
-            <button class="copy-button" id="botaoCopiarXpath" onclick="copiarXpath(this, event)">XPath</button><a id=retornoLista href="../index.html">Lista de Mapas</a>
+            <button class="copy-button" id="botaoCopiarXpath1" onclick="copiarXpath1(this, event)">XPath</button><a id=retornoLista href="../index.html">Lista de Mapas</a>
         </div>
 
         <div id="titulo" class="conteudo">
@@ -24,15 +24,17 @@
             <span class="xpath-expression1">//*[contains(@class, 'vacancie-title mb-2')]</span>
             <span class="regex-expression1" id="processadorBanco"></span>
             <span class="regex-expression2" id="naoAplicavel"></span>
-            <button class="copy-button" id="botaoCopiarXpath" onclick="copiarXpath(this, event)">XPath</button>
+            <button class="copy-button" id="botaoCopiarXpath1" onclick="copiarXpath1(this, event)">XPath</button>
+            <span>RegexReplace:</span>
             <button class="copy-button" id="botaoProcessador1" onclick="copiarProcessador1(this, event)">Processador Banco</button>
+            <span>>&nbsp</span>
             <button class="copy-button" id="botaoProcessador2" onclick="copiarProcessador2(this, event)">Não Aplicável</button>
         </div>
 
         <div id="cidade" class="conteudo">
             <span class="destaque">Cidade</span>
             <span class="xpath-expression1">//*[contains(@class, 'city-span')]</span>
-            <button class="copy-button" id="botaoCopiarXpath" onclick="copiarXpath(this, event)">XPath</button>
+            <button class="copy-button" id="botaoCopiarXpath1" onclick="copiarXpath1(this, event)">XPath</button>
         </div>
 
         <div id="estado" class="conteudo">
@@ -40,7 +42,7 @@
             <span class="regex-expression1" id="depoisDoHifen"></span>
             <span class="regex-expression2" id="hifen"></span>
             <span class="xpath-expression1">//*[contains(@class, 'city-span')]</span>
-            <button class="copy-button" id="botaoCopiarXpath" onclick="copiarXpath(this, event)">XPath</button>
+            <button class="copy-button" id="botaoCopiarXpath1" onclick="copiarXpath1(this, event)">XPath</button>
             <span>RegexMatch: </span>
             <button class="copy-button" id="botaoProcessador1" onclick="copiarProcessador1(this, event)">-.+</button>
             <span>SplitFirst: </span>
@@ -50,13 +52,13 @@
         <div id="url_detalhe" class="conteudo">
             <span class="destaque">Url_detalhe (Click)</span>
             <span class="xpath-expression1">//button[contains(text( ), 'Ver vaga')]</span>
-            <button class="copy-button" id="botaoCopiarXpath" onclick="copiarXpath(this, event)">XPath</button>
+            <button class="copy-button" id="botaoCopiarXpath1" onclick="copiarXpath1(this, event)">XPath</button>
         </div>
 
         <div id="total_anuncios_site" class="conteudo">
             <span class="destaque">Total anúncios site</span>
             <span class="xpath-expression1">//span[contains(., 'Localizamos') and contains(., 'vaga')]</span>
-            <button class="copy-button" id="botaoCopiarXpath" onclick="copiarXpath(this, event)">XPath</button>
+            <button class="copy-button" id="botaoCopiarXpath1" onclick="copiarXpath1(this, event)">XPath</button>
         </div>
 
         <div class="linha"></div>
@@ -66,7 +68,7 @@
             <span class="regex-expression1" id="descricaoPadrao"></span>
             <p id="comentario">Não usar 'Atividades' no contains, pois caso o texto seja comprido será cortado.</p>
             <span class="xpath-expression1">//*[contains(text(),'Descrição')][1]/following-sibling::div[1]</span>
-            <button class="copy-button" id="botaoCopiarXpath" onclick="copiarXpath(this, event)">XPath</button>
+            <button class="copy-button" id="botaoCopiarXpath1" onclick="copiarXpath1(this, event)">XPath</button>
             <button class="copy-button" id="botaoProcessador1" onclick="copiarProcessador1(this, event)">Descrição Padrão</button>
         </div>
 
@@ -76,7 +78,7 @@
             <span class="regex-expression2" id="ampersand"></span>
             <p id="comentario">Inserir campo e processadores mesmo que não retorne nada, manter o espaço antes de depois do ' a ' conforme cópia.</p>
             <span class="xpath-expression1">(//*[contains(.,'SALÁRIO')]/following-sibling::div[1])[1]</span>
-            <button class="copy-button" id="botaoCopiarXpath" onclick="copiarXpath(this, event)">XPath</button>
+            <button class="copy-button" id="botaoCopiarXpath1" onclick="copiarXpath1(this, event)">XPath</button>
             <span>Replace:</span>
             <button class="copy-button" id="botaoProcessador1" onclick="copiarProcessador1(this, event)">a</button>
             <span>>&nbsp</span>

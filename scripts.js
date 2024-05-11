@@ -1,4 +1,4 @@
-function copiarXpath(btn, event) {
+function copiarXpath1(btn, event) {
     // Encontra o elemento pai do botão clicado
     var parentDiv = btn.parentNode;
 
