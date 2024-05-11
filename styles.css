@@ -13,7 +13,7 @@ p {
     /* Adiciona espaço entre cada div */
 }
 
-#botaoCopiarXpath1 {
+.xPath {
     background-color: #ffcc00;
     /* Define a cor de fundo como amarelo */
     color: #fff;
@@ -32,22 +32,21 @@ p {
     /* Adiciona uma sombra mais sutil ao redor do botão */
 }
 
-#botaoCopiarXpath1:hover {
+.xPath:hover {
     background-color: #ffbb00;
     /* Altera a cor de fundo ao passar o mouse */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     /* Altera a sombra ao passar o mouse */
 }
 
-#botaoCopiarXpath1:active {
+.xPath:active {
     background-color: #ffaa00;
     /* Altera a cor de fundo temporariamente quando clicado */
     box-shadow: none;
     /* Remove a sombra quando clicado */
 }
 
-#botaoProcessador1,
-#botaoProcessador2,
+.processador,
 #retornoLista {
     background-color: #727cf5;
     /* Define a cor de fundo como #727cf5 */
@@ -67,8 +66,7 @@ p {
     /* Adiciona uma sombra mais sutil ao redor do botão */
 }
 
-#botaoProcessador1:hover,
-#botaoProcessador2:hover,
+.processador:hover,
 #retornoLista:hover {
     background-color: #5e68e4;
     /* Altera a cor de fundo ao passar o mouse */
@@ -76,8 +74,7 @@ p {
     /* Altera a sombra ao passar o mouse */
 }
 
-#botaoProcessador1:active,
-#botaoProcessador2:active,
+.processador:active,
 #retornoLista:active {
     background-color: #3a3f9e;
     /* Altera a cor de fundo temporariamente quando clicado */
@@ -143,7 +140,7 @@ p {
 }
 
 
-#disponivel {
+.disponivel {
     width: 150px;
     background-color: #4CAF50;
     /* Verde */
@@ -161,21 +158,21 @@ p {
     border-radius: 4px;
 }
 
-#disponivel:hover {
+.disponivel:hover {
     background-color: #347a38;
     /* Verde escuro no hover */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     /* Sombra no hover */
 }
 
-#disponivel:active {
+.disponivel:active {
     background-color: #154f25;
     /* Altera a cor de fundo temporariamente quando clicado */
     box-shadow: none;
     /* Remove a sombra quando clicado */
 }
 
-#indisponivel {
+.indisponivel {
     width: 150px;
     background-color: #b4aaaa;
     /* Verde */
@@ -193,12 +190,12 @@ p {
     border-radius: 4px;
 }
 
-#indisponivel:hover {
+.indisponivel:hover {
     background-color: #838483;
     /* Verde escuro no hover */
 }
 
-#indisponivel:active {
+.indisponivel:active {
     background-color: #5c5c5d;
     /* Altera a cor de fundo temporariamente quando clicado */
     box-shadow: none;
