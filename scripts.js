@@ -2,7 +2,6 @@ const processadorBanco = "(.+Banco de currículos.+)|(.+banco de curriculos.+)|(
 const descricaoPadrao = "Atuará nas atividades internas e demais funções pertinentes ao cargo. Necessário conhecimento na área de atuação."
 
 async function copiarElementoAnterior(button) {
-    // Obtém o elemento anterior ao botão
     var elementoAnterior = button.previousElementSibling;
     var texto = elementoAnterior.innerText;
     await navigator.clipboard.writeText(texto);
@@ -10,7 +9,6 @@ async function copiarElementoAnterior(button) {
 }
 
 async function copiarTextoDoBotao(button) {
-    // Obtém o texto do botão
     var texto = button.innerText;
     await navigator.clipboard.writeText(texto);
     exibirNotificacao(button, 'Copiado');
@@ -27,15 +25,12 @@ function exibirNotificacao(button, mensagem) {
     tooltip.style.display = 'block';
 
     var rect = button.getBoundingClientRect();
-    var x = rect.left + rect.width; // Ajuste para a direita
-    var y = rect.top - 20; // Ajuste para cima
-
-    // Define a posição da notificação próxima ao botão
+    var x = rect.left + rect.width;
+    var y = rect.top - 20;
     tooltip.style.top = y + 'px';
     tooltip.style.left = x + 'px';
 
-    // Oculta a notificação após um período de tempo
     setTimeout(function () {
         tooltip.style.display = 'none';
-    }, 500); // Altere o tempo conforme necessário
+    }, 500);
 }

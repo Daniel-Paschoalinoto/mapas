@@ -1,6 +1,6 @@
 body {
     background-color: #f5f5f5;
-    /* Cinza claro para a cor de fundo */
+    user-select: none
 }
 
 p {
@@ -9,8 +9,9 @@ p {
 }
 
 .conteudo {
-    margin-bottom: 15px;
-    /* Adiciona espaço entre cada div */
+    border-bottom: 1px solid #ccc; /* Adiciona uma borda inferior */
+    padding-bottom: 10px; /* Espaçamento opcional entre as divs */
+    margin-bottom: 10px; /* Espaçamento opcional entre as divs */
 }
 
 .xPath {
@@ -82,32 +83,12 @@ p {
     /* Remove a sombra quando clicado */
 }
 
-.linha {
-    width: 100%;
-    /* Estender a largura da linha para cobrir toda a página */
-    height: 1px;
-    /* Altura da linha */
-    background-color: #ccc;
-    /* Cor da linha */
-    margin-top: 15px;
-    /* Distância da linha ao conteúdo acima */
-    margin-bottom: 15px;
-    /* Distância da linha ao conteúdo abaixo */
-}
-
-
 .destaque {
     font-weight: bold;
     color: rgb(0, 0, 0);
     display: block;
     font-size: 18px;
 }
-
-.xpath-expression {
-    font-family: consolas;
-    font-size: 14px
-}
-
 
 .tooltip {
     display: none;
@@ -138,7 +119,6 @@ p {
     font-size: 18px; /* Altere o tamanho da fonte conforme necessário */
     padding: 10px 20px; /* Ajuste o padding conforme necessário para aumentar a largura do botão */
 }
-
 
 .disponivel {
     width: 150px;
@@ -221,4 +201,8 @@ h1 {
 
 .button-container {
     text-align: center;
+}
+
+.textoProcessador{
+    font-weight: bold;
 }
