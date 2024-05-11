@@ -137,6 +137,7 @@ p {
 #retornoLista {
     float: right;
     text-decoration: none;
+    margin-top: 7px;
     font-size: 18px; /* Altere o tamanho da fonte conforme necessário */
     padding: 10px 20px; /* Ajuste o padding conforme necessário para aumentar a largura do botão */
 }

@@ -4,24 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa Skeel</title>
+    <title>Mapa Gupy</title>
     <link rel="icon" type="image/png" sizes="160x160" href="../images/favicon-empregos-160x160.webp">
     <link rel="stylesheet" href="../styles.css">
 </head>
 
 <body>
-    <div id="mapa_skeel">
+    <div id="mapa_gupy">
         <div id="tooltip" class="tooltip"></div>
         <a id=retornoLista href="../index.html">Lista de Mapas</a>
         <div id="root" class="conteudo">
+            <p>Sempre inserir // no final do link</p>
             <span class="destaque">Root</span>
-            <span class="xpath-expression1">//*[contains(@class, 'vacancie-row-view')]</span>
+            <span class="xpath-expression1">//*[@id="job-listing"]/ul/li</span>
             <button class="copy-button" id="botaoCopiarXpath1" onclick="copiarXpath1(this, event)">XPath</button>
         </div>
 
         <div id="titulo" class="conteudo">
             <span class="destaque">Título</span>
-            <span class="xpath-expression1">//*[contains(@class, 'vacancie-title mb-2')]</span>
+            <span class="xpath-expression1">//*[@id="job-listing"]/ul/li/a/div/div[1]</span>
             <span class="regex-expression1" id="processadorBanco"></span>
             <span class="regex-expression2" id="naoAplicavel"></span>
             <button class="copy-button" id="botaoCopiarXpath1" onclick="copiarXpath1(this, event)">XPath</button>
@@ -33,11 +34,8 @@
 
         <div id="cidade" class="conteudo">
             <span class="destaque">Cidade</span>
-            <span class="regex-expression2" id="hifen"></span>
-            <span class="xpath-expression1">//*[contains(@class, 'city-span')]</span>
+            <span class="xpath-expression1">//*[@id="job-listing"]/ul/li//a/div/div[2]</span>
             <button class="copy-button" id="botaoCopiarXpath1" onclick="copiarXpath1(this, event)">XPath</button>
-            <span>SplitFirst: </span>
-            <button class="copy-button" id="botaoProcessador2" onclick="copiarProcessador2(this, event)"> - </button>
         </div>
 
         <div id="estado" class="conteudo">
@@ -48,7 +46,7 @@
             <button class="copy-button" id="botaoCopiarXpath1" onclick="copiarXpath1(this, event)">XPath</button>
             <span>RegexMatch: </span>
             <button class="copy-button" id="botaoProcessador1" onclick="copiarProcessador1(this, event)">-.+</button>
-            <span>Replace: </span>
+            <span>SplitFirst: </span>
             <button class="copy-button" id="botaoProcessador2" onclick="copiarProcessador2(this, event)"> - </button>
         </div>
 
