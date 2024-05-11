@@ -21,7 +21,14 @@
         <div id="titulo" class="conteudo">
             <h2>Título</h2>
             <div>
-                <span class="regex-expression"></span>
+                <span class="regex-expression">(.+Banco de currículos.+)|(.+banco de
+                    curriculos.+)|(.+baco de currículo.+)|(.+Banco de curriculo.+)|(.+banco de talentos.+)|(.+banco de
+                    talento.+)|(.+banco de Candidatos.+)|(.+banco de candidato.+)|(.+Banco de currículos)|(.+banco de
+                    curriculos)|(.+baco de currículo)|(.+Banco de curriculo)|(.+banco de talentos)|(.+banco de
+                    talento)|(.+banco de Candidatos)|(.+banco de candidato)|(Banco de currículos.+)|(banco de
+                    curriculos.+)|(baco de currículo.+)|(Banco de curriculo.+)|(banco de talentos.+)|(banco de
+                    talento.+)|(banco de Candidatos.+)|(banco de candidato.+)|(.+Banco de Currículos.+)|(.+VAGA
+                    BANCO.+)</span>
             </div>
             <div>
                 <span class="xpath-expression">//*[contains(@class, 'vacancie-title mb-2')]</span>
@@ -36,6 +43,7 @@
             <button class="copy-button" onclick="copyXPath(this, event)">Copiar XPath</button>
         </div>
     </div>
+
    
     <script src="scripts.js"></script>
     <script src="conteudosPadrao.js"></script>
