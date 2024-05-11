@@ -1,38 +1,53 @@
-function copyXPath(btn, event) {
+function copiarXpath(btn, event) {
     // Encontra o elemento pai do botão clicado
     var parentDiv = btn.parentNode;
 
     // Seleciona o texto dentro do span dentro do elemento pai
-    var xpathExpression = parentDiv.querySelector('.xpath-expression').innerText;
+    var xpathExpression1 = parentDiv.querySelector('.xpath-expression1').innerText;
 
     // Copia o texto para a área de transferência
-    navigator.clipboard.writeText(xpathExpression).then(function() {
+    navigator.clipboard.writeText(xpathExpression1).then(function() {
         // Mostrar mensagem próxima ao cursor do mouse
-        showTooltip('Conteúdo copiado', event);
+        showTooltip('Copiado', event);
     }).catch(function(err) {
         // Caso ocorra algum erro
         console.error('Erro ao copiar XPath: ', err);
     });
 }
 
-function copyRegex(btn, event) {
+function copiarProcessador1(btn, event) {
     // Encontra o elemento pai do botão clicado
     var parentDiv = btn.parentNode;
 
     // Seleciona o texto dentro do span dentro do elemento pai
-    var regexExpression = parentDiv.querySelector('.regex-expression').innerText;
+    var regexExpression1 = parentDiv.querySelector('.regex-expression1').innerText;
 
     // Copia o texto para a área de transferência
-    navigator.clipboard.writeText(regexExpression).then(function() {
+    navigator.clipboard.writeText(regexExpression1).then(function() {
         // Mostrar mensagem próxima ao cursor do mouse
-        showTooltip('Conteúdo copiado', event);
+        showTooltip('Copiado', event);
     }).catch(function(err) {
         // Caso ocorra algum erro
         console.error('Erro ao copiar Regex: ', err);
     });
 }
 
+function copiarProcessador2(btn, event) {
+    // Encontra o elemento pai do botão clicado
+    var parentDiv = btn.parentNode;
 
+    // Seleciona o texto dentro do span dentro do elemento pai
+    var regexExpression2 = parentDiv.querySelector('.regex-expression2').innerText;
+
+    // Copia o texto para a área de transferência
+    navigator.clipboard.writeText(regexExpression2).then(function() {
+        // Mostrar mensagem próxima ao cursor do mouse
+        showTooltip('Copiado', event);
+    }).catch(function(err) {
+        // Caso ocorra algum erro
+        console.error('Erro ao copiar Regex: ', err);
+    });
+}
 
 // Função para mostrar a caixa de mensagem
 function showTooltip(message, event) {
@@ -45,6 +60,6 @@ function showTooltip(message, event) {
     // Oculta a caixa de mensagem após alguns segundos
     setTimeout(function() {
       tooltip.style.display = "none";
-    }, 2000);
+    }, 600);
   }
   

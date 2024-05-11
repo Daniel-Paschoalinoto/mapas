@@ -1,11 +1,143 @@
-/* Estilo da caixa de mensagem */
-.tooltip {
-  display: none;
-  position: fixed;
-  background-color: #333;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 14px;
-  z-index: 9999;
+body {
+    background-color: #f5f5f5;
+    /* Cinza claro para a cor de fundo */
 }
+
+p {
+    font-style: italic;
+    font-size: 14px;
+}
+
+.conteudo {
+    margin-bottom: 15px;
+    /* Adiciona espaço entre cada div */
+}
+
+#botaoCopiarXpath {
+    background-color: #ffcc00;
+    /* Define a cor de fundo como amarelo */
+    color: #fff;
+    /* Define a cor do texto como branco */
+    border: none;
+    /* Remove a borda existente */
+    padding: 8px 16px;
+    /* Preenchimento interno */
+    border-radius: 4px;
+    /* Bordas arredondadas */
+    cursor: pointer;
+    /* Altera o cursor ao passar sobre o botão */
+    margin-right: 8px;
+    /* Adiciona um pequeno espaço à direita */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Adiciona uma sombra mais sutil ao redor do botão */
+}
+
+#botaoCopiarXpath:hover {
+    background-color: #ffbb00;
+    /* Altera a cor de fundo ao passar o mouse */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Altera a sombra ao passar o mouse */
+}
+
+#botaoCopiarXpath:active {
+    background-color: #ffaa00;
+    /* Altera a cor de fundo temporariamente quando clicado */
+    box-shadow: none;
+    /* Remove a sombra quando clicado */
+}
+
+#botaoProcessador1,
+#botaoProcessador2,
+#retornoLista {
+    background-color: #727cf5;
+    /* Define a cor de fundo como #727cf5 */
+    color: #fff;
+    /* Define a cor do texto como branco */
+    border: none;
+    /* Remove a borda existente */
+    padding: 8px 16px;
+    /* Preenchimento interno */
+    border-radius: 4px;
+    /* Bordas arredondadas */
+    cursor: pointer;
+    /* Altera o cursor ao passar sobre o botão */
+    margin-right: 8px;
+    /* Adiciona um pequeno espaço à direita */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Adiciona uma sombra mais sutil ao redor do botão */
+}
+
+#botaoProcessador1:hover,
+#botaoProcessador2:hover,
+#retornoLista:hover {
+    background-color: #5e68e4;
+    /* Altera a cor de fundo ao passar o mouse */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Altera a sombra ao passar o mouse */
+}
+
+#botaoProcessador1:active,
+#botaoProcessador2:active,
+#retornoLista:active {
+    background-color: #3a3f9e;
+    /* Altera a cor de fundo temporariamente quando clicado */
+    box-shadow: none;
+    /* Remove a sombra quando clicado */
+}
+
+.linha {
+    width: 100%;
+    /* Estender a largura da linha para cobrir toda a página */
+    height: 1px;
+    /* Altura da linha */
+    background-color: #ccc;
+    /* Cor da linha */
+    margin-top: 15px;
+    /* Distância da linha ao conteúdo acima */
+    margin-bottom: 15px;
+    /* Distância da linha ao conteúdo abaixo */
+}
+
+
+.destaque {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    display: block;
+    font-size: 18px;
+    /* Defina o tamanho da fonte como desejado */
+    /* Outros estilos desejados */
+}
+
+.xpath-expression {
+    font-family: consolas;
+    font-size: 14px
+}
+
+
+.tooltip {
+    display: none;
+    position: fixed;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 9999;
+}
+
+
+#processadorBanco,
+#hifen,
+#depoisDoHifen,
+#descricaoPadrao,
+#naoAplicavel,
+#ampersand,
+#letraAComEspacosEmTorno {
+    display: none;
+}
+
+
+.button-container {
+    text-align: center;
+}
+
