@@ -33,6 +33,7 @@
 
         <div id="cidade" class="conteudo">
             <span class="destaque">Cidade</span>
+            <p>Verifique em mais vagas se a empresa divulga a região na descrição ou tem filtro em cidade, caso não, insira cidade da empresa como default.</p>
             <span>//*[contains(@class, 'city-span')]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>SplitFirst: </span>
@@ -41,10 +42,11 @@
 
         <div id="estado" class="conteudo">
             <span class="destaque">Estado</span>
+            <p>Não inserir default nesse campo.</p>
             <span>//*[contains(@class, 'city-span')]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>RegexMatch: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">-.+</button>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">-.+</button>/
             <span class=textoProcessador>Replace: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>
         </div>
@@ -86,7 +88,7 @@
             <span class=textoProcessador>Replace: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">&nbsp;a&nbsp;</button>
             <span>⇄&nbsp</span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">&</button>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">&</button>/
             <span class=textoProcessador>SplitFirst: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">&</button>            
         </div>
