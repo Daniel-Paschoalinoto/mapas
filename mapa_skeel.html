@@ -1,47 +1,44 @@
-MAPA SKEEL (entender se o campo total de anúncios site aparece em algum lugar ou será usada de forma interna)
-SKEEL:
+<!DOCTYPE html>
+<html lang="en">
 
-root:
-//*[contains(@class, 'vacancie-row-view')]
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Skeel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-titulo:
-//*[contains(@class, 'vacancie-title mb-2')]
+<body>
+    <div id="mapa_skeel">
+        <div id="tooltip" class="tooltip"></div>
 
-(.+Banco de currículos.+)|(.+banco de curriculos.+)|(.+baco de currículo.+)|(.+Banco de curriculo.+)|(.+banco de talentos.+)|(.+banco de talento.+)|(.+banco de Candidatos.+)|(.+banco de candidato.+)|(.+Banco de currículos)|(.+banco de curriculos)|(.+baco de currículo)|(.+Banco de curriculo)|(.+banco de talentos)|(.+banco de talento)|(.+banco de Candidatos)|(.+banco de candidato)|(Banco de currículos.+)|(banco de curriculos.+)|(baco de currículo.+)|(Banco de curriculo.+)|(banco de talentos.+)|(banco de talento.+)|(banco de Candidatos.+)|(banco de candidato.+)|(.+Banco de Currículos.+)|(.+VAGA BANCO.+)
+        <div id="root" class="conteudo">
+            <h2>Root</h2>
+            <p class="xpath-expression">//*[contains(@class, 'vacancie-row-view')]</p>
+            <button class="copy-button" onclick="copyXPath(this, event)">Copiar XPath</button>
+        </div>
 
-cidade:
-//*[contains(@class, 'city-span')]
+        <div id="titulo" class="conteudo">
+            <h2>Título</h2>
+            <div>
+                <span class="regex-expression"></span>
+            </div>
+            <div>
+                <span class="xpath-expression">//*[contains(@class, 'vacancie-title mb-2')]</span>
+            </div>
+            <button class="copy-button" onclick="copyXPath(this, event)">Copiar XPath</button>
+            <button class="copy-button" onclick="copyRegex(this, event)">Copiar Processador</button>
+        </div>
 
-estado
-//*[contains(@class, 'city-span')]
+        <div id="cidade" class="conteudo">
+            <h2>Cidade</h2>
+            <p class="xpath-expression">//*[contains(@class, 'city-span')]</p>
+            <button class="copy-button" onclick="copyXPath(this, event)">Copiar XPath</button>
+        </div>
+    </div>
+   
+    <script src="scripts.js"></script>
+    <script src="conteudosPadrao.js"></script>
+</body>
 
-RegexMatch   -.+
-Replace   -   > 
-
-<button>teste</button>
-
-URL_DETALHE (click)
-//button[contains(text( ), 'Ver vaga')]
-
-Total anúncios site
-//span[contains(., 'Localizamos') and contains(., 'vaga')]
-
-
-DENTROOOOOOOOO
-Descrição
-//*[contains(text(),'Descrição')][1]/following-sibling::div[1]
-
-//*[contains(text(),'Atividades')][1]/following-sibling::div[1]
-Utilizar Atividades apenas caso em TODAS as vagas a empresa não deixe o campo extenso. Ou será cortado devido ao 'Ver mais'.
-
-Inserir
-Atuará nas atividades internas e demais funções pertinentes ao cargo. Necessário conhecimento na área de atuação.
-
-Salário (inserir campo e processadores mesmo que o campo não exista)
-(//*[contains(.,'SALÁRIO')]/following-sibling::div[1])[1]
-
-Replace   a   >   & (COM ESPAÇO ANTES E DEPOIS DO A)
-×SplitFirst   &  
-
-
-
+</html>

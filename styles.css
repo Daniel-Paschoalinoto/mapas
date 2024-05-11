@@ -1,0 +1,19 @@
+/* styles.css */
+#mapa_skeel {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.anuncios {
+    margin-bottom: 20px;
+}
+
+#copiarAnuncios {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
