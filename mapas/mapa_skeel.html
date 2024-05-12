@@ -26,7 +26,7 @@
             <span>//*[contains(@class, 'vacancie-title mb-2')]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>RegexReplace: </span>
-            <button class="processador" onclick="copiarConteudoProcessador(this, processadorBanco)">Banco de Currículos</button>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorBanco)">Banco de Currículos</button>
             <span>⇄&nbsp</span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">Não Aplicável</button>
         </div>
@@ -74,7 +74,7 @@
             <p>Outros campos não foram captados pois em Atividades caso seja extenso demais o texto ficará cortado.</p>
             <span>//*[contains(text(),'Descrição')][1]/following-sibling::div[1]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
-            <button class="processador" onclick="copiarConteudoProcessador(this, descricaoPadrao)">Descrição Padrão</button>
+            <button class="processador" onclick="copiarTermoPadrao(this, descricaoPadrao)">Descrição Padrão</button>
         </div>
 
         <div id="salario" class="conteudo">

@@ -14,7 +14,7 @@ async function copiarTextoDoBotao(button) {
     exibirNotificacao(button, 'Copiado');
 }
 
-async function copiarConteudoProcessador(button, processador) {
+async function copiarTermoPadrao(button, processador) {
     await navigator.clipboard.writeText(processador);
     exibirNotificacao(button, 'Copiado');
 }

@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa Gupy</title>
+    <title>Mapa RhGestor</title>
     <link rel="icon" type="image/png" sizes="160x160" href="../images/favicon-empregos-160x160.webp">
     <link rel="stylesheet" href="../styles.css">
     
 </head>
 
 <body>
-    <div id="mapa_gupy">
+    <div id="mapa_rhgestor">
         <div class="tooltip"></div>
         <a id=retornoLista href="../index.html">Lista de Mapas</a>
 
@@ -26,7 +26,7 @@
             <span>//*[@id="vagas"]//h5/a/strong</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>Regex Replace: </span>
-            <button class="processador" onclick="copiarConteudoProcessador(this, processadorBanco)">Banco de Currículos</button>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorBanco)">Banco de Currículos</button>
             <span>⇄&nbsp</span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">Não Aplicável</button>
         </div>
@@ -43,7 +43,7 @@
         <div id="estado" class="conteudo">
             <span class="destaque">Estado</span>
             <p>Não inserir default nesse campo.</p>
-            <span>//*[@id="job-listing"]/ul/li//a/div/div[2]</span>
+            <span>//*[contains(@class, 'localizacao-vaga')]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>RegexMatch: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">-.+</button>/&nbsp
@@ -71,10 +71,12 @@
         </div>
 
         <div id="descricao" class="conteudo">
-            <span class="destaque">Descrição</span>
+            <span class="destaque">Descrição (Dentro de url_detalhe)</span>
             <span>//*[@id="box-vaga"]/div/div[2]/div[2]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
-            <button class="processador" onclick="copiarConteudoProcessador(this, descricaoPadrao)">Descrição Padrão</button>
+            <button class="processador" onclick="copiarTermoPadrao(this, descricaoPadrao)">Descrição Padrão</button>
+            <span class=textoProcessador>Replace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">Descrição da Vaga</button>            
         </div>
     </div>
     <script src="../scripts.js"></script>
