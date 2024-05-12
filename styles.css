@@ -8,6 +8,11 @@ p {
     font-size: 14px;
 }
 
+h1 {
+    margin: 0; /* Limpa as margens padrão do h1 */
+    margin-bottom: 7px;
+}
+
 .conteudo {
     border-bottom: 1px solid #ccc; /* Adiciona uma borda inferior */
     padding-bottom: 10px; /* Espaçamento opcional entre as divs */
@@ -192,11 +197,6 @@ p {
     height: auto; /* Mantém a proporção */
     margin-right: 10px; /* Espaçamento entre a imagem e o texto */
     margin-bottom: 5px;
-}
-
-h1 {
-    margin: 0; /* Limpa as margens padrão do h1 */
-    margin-bottom: 7px;
 }
 
 .button-container {
