@@ -15,6 +15,7 @@
         <a id=retornoLista href="../index.html">Lista de Mapas</a>
 
         <div id="root" class="conteudo">
+            <p>Sempre inserir // no final do URL</p>
             <span class="destaque">Root</span>
             <span>//*[@id="job-listing"]/ul/li</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
@@ -32,7 +33,7 @@
 
         <div id="cidade" class="conteudo">
             <span class="destaque">Cidade</span>
-            <p>Verifique em mais vagas se a empresa divulga a região na descrição ou tem filtro em cidade, caso não, insira cidade da empresa como default.</p>
+            <p>Insira a cidade Default, apenas se a empresa não divulgar a vaga em nenhuma, ou se a descrição for Default.</p>
             <span>//*[@id="job-listing"]/ul/li//a/div/div[2]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>RegexReplace: </span>
@@ -80,7 +81,7 @@
         </div>
 
         <div id="descricao" class="conteudo">
-            <span class="destaque">Descrição (dentro de url_detalhe à partir daqui)</span>
+            <span class="destaque">Descrição (dentro de url_detalhe)</span>
             <p>Avalie mais vagas para escolher a melhor opção.</p>
             <span>//h2[contains(text(),'Responsabilidades e atribuições')]/following-sibling::div[1]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
