@@ -206,3 +206,33 @@ h1 {
 .textoProcessador{
     font-weight: bold;
 }
+
+.bloqueado {
+    width: 150px;
+    background-color: #d04035;
+    /* Verde */
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    padding: 10px 20px;
+    /* Tamanho do botão */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.bloqueado:hover {
+    background-color: #9d3725;
+    /* Verde escuro no hover */
+}
+
+.bloqueado:active {
+    background-color: #721a1a;
+    /* Altera a cor de fundo temporariamente quando clicado */
+    box-shadow: none;
+    /* Remove a sombra quando clicado */
+}
