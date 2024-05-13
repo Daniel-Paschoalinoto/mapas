@@ -4,77 +4,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa RhGestor</title>
+    <title>Mapa Abler</title>
     <link rel="icon" type="image/png" sizes="160x160" href="../images/favicon-empregos-160x160.webp">
     <link rel="stylesheet" href="../styles.css">
-    
 </head>
 
 <body>
-    <div id="mapa_rhgestor">
+    <div id="mapa_abler">
         <div class="tooltip"></div>
         <a id=retornoLista href="../index.html">Lista de Mapas</a>
 
         <div id="root" class="conteudo">
+            <p>Caso algum campo não carregue verificar se a URL apresenta "ATS.ABLER" em sua composição.Deixar manual se for o caso.</p>
             <span class="destaque">Root</span>
-            <span>//*[contains(@class, 'item-vaga')]</span>
+            <span>//table[@class="table border-0 d-none d-md-none d-lg-block"]/tbody/tr</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
         </div>
 
         <div id="titulo" class="conteudo">
             <span class="destaque">Título</span>
-            <span>//*[@id="vagas"]//h5/a/strong</span>
+            <span>//table[@class="table border-0 d-none d-md-none d-lg-block"]/tbody/tr/td[1]/a</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>RegexReplace: </span>
             <button class="processador" onclick="copiarTermoPadrao(this, processadorBanco)">Banco de Currículos</button>
             <span>⇄&nbsp</span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">Não Aplicável</button>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">Não Aplicável</button>/
+            <span class=textoProcessador>RegexReplace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">[0-9]</button>
+            <span>⇄&nbsp</span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>/
+            <span class=textoProcessador>Replace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>
         </div>
 
         <div id="cidade" class="conteudo">
             <span class="destaque">Cidade</span>
-            <span>//*[contains(@class, 'localizacao-vaga')]</span>
+            <span>//table[@class="table border-0 d-none d-md-none d-lg-block"]/tbody/tr/td[5]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>RegexReplace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">Não divulgada</button>
+            <span>⇄&nbsp</span>
+            <span>Cidade da empresa</span>&nbsp/
+            <span class=textoProcessador>SplitLast: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">,</button>/
             <span class=textoProcessador>SplitFirst: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>
         </div>
 
         <div id="estado" class="conteudo">
             <span class="destaque">Estado</span>
-            <span>//*[contains(@class, 'localizacao-vaga')]</span>
+            <span>//table[@class="table border-0 d-none d-md-none d-lg-block"]/tbody/tr/td[5]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>RegexReplace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">Não divulgada</button>
+            <span>⇄&nbsp</span>
+            <span>Estado da empresa</span>&nbsp/
             <span class=textoProcessador>RegexMatch: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">-.+</button>/&nbsp
+            <button class="processador" onclick="copiarTextoDoBotao(this)">-.+</button>/
             <span class=textoProcessador>Replace: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>
         </div>
 
         <div id="url_detalhe" class="conteudo">
             <span class="destaque">Url_detalhe (href)</span>
-            <span>//*[@id="vagas"]/div/div[2]/div/div/h5/a</span>
+            <span>//table[@class="table border-0 d-none d-md-none d-lg-block"]/tbody/tr/td[1]/a</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
         </div>
 
         <div id="total_anuncios_site" class="conteudo">
             <span class="destaque">Total_anuncios_site</span>
-            <span>//strong[contains(text( ), 'vaga') and contains(text( ), 'encontrada')]</span>
+            <span>//*[@id="list-vacancy"]/div/header/h2</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
         </div>
 
         <div id="paginacao" class="conteudo">
-            <span class="destaque">Paginação</span>
+            <span class="destaque">Paginação (Intercept)</span>
             <span>Parâmetro de Paginação: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">?&page=2</button>
-            <span>Url de Paginação ou Rota principal (exemplo): https://rgk4it.rhgestor.com.br/vagas</span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">&page=2</button>
+            <span>Url de Paginação ou Rota principal (exemplo): https://ashtalentos.abler.com.br/api_v/v1/vagas.json</span>
         </div>
 
         <div id="descricao" class="conteudo">
             <span class="destaque">Descrição (dentro de url_detalhe)</span>
-            <span>//*[@id="box-vaga"]/div/div[2]/div[2]</span>
+            <span>//div[@class="card-body card-description"]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <button class="processador" onclick="copiarTermoPadrao(this, descricaoPadrao)">Descrição Padrão</button>
-            <span class=textoProcessador>Replace: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">Descrição da Vaga</button>            
         </div>
     </div>
     <script src="../scripts.js"></script>
