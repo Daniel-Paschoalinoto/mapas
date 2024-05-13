@@ -35,14 +35,15 @@
             <span class="destaque">Cidade</span>
             <span>//*[@id="job-listing"]/ul/li//a/div/div[2]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>SplitFirst: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>/
+            <span class=textoProcessador>RegexReplace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">e Remoto</button>
+            <p>Em caso de filtro não inserir:</p>
             <span class=textoProcessador>RegexReplace: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">Trabalho Remoto</button>
             <span>⇄&nbsp</span>
-            <span>Cidade da empresa</span>&nbsp/
-            <span class=textoProcessador>RegexReplace: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">e Remoto</button>/
-            <span class=textoProcessador>SplitFirst: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>
+            <span>Cidade da empresa</span>
         </div>
 
         <div id="estado" class="conteudo">
@@ -50,15 +51,16 @@
             <span>//*[@id="job-listing"]/ul/li//a/div/div[2]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>RegexReplace: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">Trabalho Remoto</button>
-            <span>⇄&nbsp</span>
-            <span>-Estado da empresa (com hífen)</span>&nbsp/
-            <span class=textoProcessador>RegexReplace: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">e Remoto|e Híbrido</button>/&nbsp
             <span class=textoProcessador>RegexMatch: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">-.+</button>/&nbsp
             <span class=textoProcessador>Replace: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>
+            <p>Inserir antes do RegexMatch caso não tenha filtro:</p>
+            <span class=textoProcessador>RegexReplace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">Trabalho Remoto</button>
+            <span>⇄&nbsp</span>
+            <span>-Estado da empresa (com hífen)</span><br>
         </div>
 
         <div id="url_detalhe" class="conteudo">
