@@ -4,25 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa Skeel</title>
+    <title>Mapa Solides 3</title>
     <link rel="icon" type="image/png" sizes="160x160" href="../images/favicon-empregos-160x160.webp">
     <link rel="stylesheet" href="../styles.css">
 </head>
 
 <body>
-    <div id="mapa_skeel">
+    <div id="mapa_solides_3">
         <div class="tooltip"></div>
         <a id=retornoLista href="../index.html">Lista de Mapas</a>
 
         <div id="root" class="conteudo">
             <span class="destaque">Root</span>
-            <span>//*[contains(@class, 'vacancie-row-view')]</span>
+            <span>//*[@id="__next"]/main/div/div/section[1]/ul/li</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
         </div>
 
         <div id="titulo" class="conteudo">
             <span class="destaque">Título</span>
-            <span>//*[contains(@class, 'vacancie-title mb-2')]</span>
+            <span>//*[@id="__next"]//header/div/h3</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>RegexReplace: </span>
             <button class="processador" onclick="copiarTermoPadrao(this, processadorBanco)">Banco de Currículos</button>
@@ -32,15 +32,21 @@
 
         <div id="cidade" class="conteudo">
             <span class="destaque">Cidade</span>
-            <span>//*[contains(@class, 'city-span')]</span>
+            <span>//*[@id="__next"]//div[1]/p[1]/text( )</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>RegexReplace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">Local não informado</button>
+            <span>⇄&nbsp</span>
+            <span>Cidade da empresa</span>&nbsp/
+            <span class=textoProcessador>SplitLast: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">,</button>/
             <span class=textoProcessador>SplitFirst: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>
         </div>
 
         <div id="estado" class="conteudo">
             <span class="destaque">Estado</span>
-            <span>//*[contains(@class, 'city-span')]</span>
+            <span>//*[@id="__next"]//div[1]/p[1]/text( )</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>RegexMatch: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">-.+</button>/
@@ -50,43 +56,32 @@
 
         <div id="url_detalhe" class="conteudo">
             <span class="destaque">Url_detalhe (click)</span>
-            <span>//button[contains(text( ), 'Ver vaga')]</span>
+            <span>//*[@id="__next"]//div[3]/button</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
         </div>
 
-        <div id="total_anuncios_site" class="conteudo">
-            <span class="destaque">Total_anuncios_site</span>
-            <span>//span[contains(., 'Localizamos') and contains(., 'vaga')]</span>
+        <div id="total_vagas" class="conteudo">
+            <span class="destaque">Total_vagas</span>
+            <span>//*[@id="__next"]//div[1]/p[2]/text( )</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
         </div>
 
         <div id="paginacao" class="conteudo">
             <span class="destaque">Paginação</span>
-            <p>Empresa não utiliza paginação.</p>
+            <span>Parâmetro de Paginação: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">?page=2</button>
+            <span>Url de Paginação ou Rota principal (exemplo): https://vemprakothe.vagas.solides.com.br/</span><br>
+            <span class="textoProcessador">Xpath identificação paginação (para usar no bot): </span>
+            <span>//*[@id="__next"]/main/div/div/section[1]/nav/button[3]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
         </div>
 
         <div id="descricao" class="conteudo">
-            <span class="destaque">Descrição (dentro de url_detalhe à partir daqui)</span>
-            <p>Outros campos não foram captados pois em Atividades caso seja extenso demais o texto ficará cortado.</p>
-            <span>//*[contains(text(),'Descrição')][1]/following-sibling::div[1]</span>
+            <span class="destaque">Descrição (dentro de url_detalhe)</span>
+            <span>//*[@class="flex flex-col items-stretch gap-y-4 w-full max-w-6xl mx-auto mt-6 mb-10"]/section/div/span</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <button class="processador" onclick="copiarTermoPadrao(this, descricaoPadrao)">Descrição Padrão</button>
         </div>
-
-        <div id="salario" class="conteudo">
-            <span class="destaque">Salário</span>
-            <p>Inserir campo e processadores mesmo que o campo não puxe nada.</p>
-            <p>O processador ' a ' do  (Replace ' a ' por  ⇄) deve permanecer com os espaços antes e depois.</p>
-            <span>(//*[contains(.,'SALÁRIO')]/following-sibling::div[1])[1]</span>
-            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
-            <span class=textoProcessador>Replace: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">&nbsp;a&nbsp;</button>
-            <span>⇄&nbsp</span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">&</button>/
-            <span class=textoProcessador>SplitFirst: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">&</button>            
-        </div>
-
     </div>
     <script src="../scripts.js"></script>
 </body>
