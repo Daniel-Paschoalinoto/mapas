@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Burh 1</title>
+    <link rel="icon" type="image/png" sizes="160x160" href="../images/favicon-empregos-160x160.webp">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <div id="mapa_burh_1">
+        <div class="tooltip"></div>
+        <a id=retornoLista href="../index.html">Lista de Mapas</a>
+
+        <div id="root" class="conteudo">
+            <span class="destaque">Root</span>
+            <span>//*[@id="__layout"]/div/div[3]/div/div[2]/div[3]/div/div/div/div[2]/div/div</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <div id="titulo" class="conteudo">
+            <span class="destaque">Título</span>
+            <span>//*[@id="__layout"]/div/div[3]/div/div[2]/div[3]/div/div/div/div[2]/div/div/div/div[2]/h5</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>RegexReplace: </span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorBanco)">Banco de Currículos</button>
+            <span>⇄&nbsp</span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">Não Aplicável</button>
+        </div>
+
+        <div id="cidade" class="conteudo">
+            <span class="destaque">Cidade</span>
+            <span>//*[@id="__layout"]/div/div[3]/div/div[2]/div[3]/div/div/div/div[2]/div/div/div/div[2]/span[2]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <div id="estado" class="conteudo">
+            <span class="destaque">Estado</span>
+            <span>Verificar se todas as vagas são do Estado de SP, e inserir SP Default caso sim.</span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">SP</button><br>
+            <span>//*[@id="__layout"]/div/div[3]/div/div[2]/div[3]/div/div/div/div[2]/div/div/div/div[2]/span[2]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <div id="url_detalhe" class="conteudo">
+            <span class="destaque">Url_detalhe (click)</span>
+            <span>//*[@id="__layout"]/div/div[3]/div/div[2]/div[3]/div/div/div/div[2]/div/div/div/div[2]/h5</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <div id="total_anuncios_site" class="conteudo">
+            <span class="destaque">Total_anúncios_site</span>
+            <span>//ul[@class="list-inline"]/li[2]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <div id="paginacao" class="conteudo">
+            <span class="destaque">Paginação se necessária</span>
+            <p>Empresa não utiliza paginação.</p>
+        </div>
+
+        <div id="descricao" class="conteudo">
+            <span class="destaque">Descrição (dentro de url_detalhe)</span>
+            <span>//div[@class="job-detail__body"]/div[1]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <button class="processador" onclick="copiarTermoPadrao(this, descricaoPadrao)">Descrição Padrão</button>
+        </div>
+    </div>
+    <script src="../scripts.js"></script>
+</body>
+
+</html>
