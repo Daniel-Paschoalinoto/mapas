@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Catho Busca</title>
+    <link rel="icon" type="image/png" sizes="160x160" href="../images/favicon-empregos-160x160.webp">
+    <link rel="stylesheet" href="../styles.css">
+
+</head>
+
+<body>
+    <div id="mapa_catho_busca">
+        <div class="tooltip"></div>
+        <a id=retornoLista href="../index.html">Lista de Mapas</a>
+
+        <div id="root" class="conteudo">
+            <span class="destaque">Root</span>
+            <span>//*[@id="search-result"]/ul/li</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <div id="titulo" class="conteudo">
+            <span class="destaque">Título</span>
+            <span>//*[@id="search-result"]/ul/li/article/article/header/div</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>RegexReplace: </span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorBanco)">Banco de Currículos</button>
+            <span>⇄&nbsp</span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">Não Aplicável</button>
+            <p>Processador para evitar divulgar vagas de outras empresas.</p>
+            <span class=textoProcessador>RegexMatch: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">.+</button>.+Nome da Empresa<br>
+            <span class=textoProcessador>RegexReplace: </span>Nome da Empresa
+        </div>
+
+        <div id="cidade" class="conteudo">
+            <span class="destaque">Cidade</span>
+            <span>//*[@id="search-result"]/ul/li/article/article/header/div/div/button[1]/a/text( )</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>SplitFirst: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">-</button><br>
+        </div>
+
+        <div id="estado" class="conteudo">
+            <span class="destaque">Estado</span>
+            <span>//*[@id="search-result"]/ul/li/article/article/header/div/div/button[1]/a/text( )</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>RegexMatch: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">-.+</button>/&nbsp
+            <span class=textoProcessador>Replace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>/&nbsp
+            <span class=textoProcessador>SplitFirst: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">&#40;</button>
+        </div>
+
+        <div id="url_detalhe" class="conteudo">
+            <span class="destaque">Url_detalhe (href)</span>
+            <span>//*[@id="search-result"]/ul/li/article/article/header/div/div[1]/h2/a</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <div id="total_vagas" class="conteudo">
+            <span class="destaque">Total_vagas</span>
+            <span>//*[@id="search-result"]/ul/li/article/article/header/div/div[2]/strong</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <div id="paginacao" class="conteudo">
+            <span class="destaque">Paginação se necessário</span>
+            <p></p>
+            <span>Parâmetro de Paginação: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">&page=2</button><br>
+            <span>Url de Paginação ou Rota principal (exemplo): https://www.catho.com.br/vagas/grupo-souza-lima/?q=Grupo%20Souza%20Lima</span>
+        </div>
+
+        <div id="descricao" class="conteudo">
+            <span class="destaque">Descrição (dentro de url_detalhe)</span>
+            <span>//*[@class="job-description"]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <button class="processador" onclick="copiarTermoPadrao(this, descricaoPadrao)">Descrição Padrão</button>
+        </div>
+    </div>
+    <script src="../scripts.js"></script>
+</body>
+
+</html>
