@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BNE</title>
+    <link rel="icon" type="image/png" sizes="160x160" href="../images/favicon-empregos-160x160.webp">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <div id="mapa_bne">
+        <div class="tooltip"></div>
+        <a id=retornoLista href="../index.html">Lista de Mapas</a>
+        <p>A primeira opção de Expressão, deve ser usada em urls como "https://www.bne.com.br/trabalhe-conosco/", caso
+            após o .com.br venha /jobs, usar a segunda.</p>
+        <div id="root" class="conteudo">
+            <span class="destaque">Root</span>
+            <span>//section[@class="job job__vip__candidacy"]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <p>ou</p>
+            <span>//*[@id="CompanyOffers"]/a</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <div id="titulo" class="conteudo">
+            <span class="destaque">Título</span>
+            <span>//*[@class="job__title"]//h2</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>RegexReplace: </span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorBanco)">Banco de Currículos</button>
+            <span>⇄&nbsp</span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">Não Aplicável</button>
+            <p>ou</p>
+            <span>//*[@class="CompanyOffers__info__funcao"]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>RegexReplace: </span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorBanco)">Banco de Currículos</button>
+            <span>⇄&nbsp</span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">Não Aplicável</button>
+        </div>
+
+        <div id="cidade" class="conteudo">
+            <span class="destaque">Cidade</span>
+            <span>//*[contains(@class, 'job__detail') and contains(., 'Localização:')]//strong/following-sibling::text( )</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>SplitLast: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">,</button>/
+            <span class=textoProcessador>SplitFirst: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">/</button>
+            <p>ou</p>
+            <span>//p[contains(@class, "companyColor CompanyOffers__info__city")]/span</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>SplitFirst: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">/</button>/
+        </div>
+
+        <div id="estado" class="conteudo">
+            <span class="destaque">Estado</span>
+            <span>//*[contains(@class, 'job__detail') and contains(., 'Localização:')]//strong/following-sibling::text( )</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>SplitLast: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">/</button>
+            <p>ou</p>
+            <span>//p[contains(@class, "companyColor CompanyOffers__info__city")]/span</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>SplitLast: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">/</button>
+        </div>
+
+        <div id="url_detalhe" class="conteudo">
+            <span class="destaque">Url_detalhe (href)</span>
+            <span>//*[@class="job__title"]//a</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <p>ou</p>
+            <span>//*[@id="CompanyOffers"]/a</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <!-- <div id="total_anuncios_site" class="conteudo">
+            <span class="destaque">Total_anuncios_site</span>
+            <span>//*[contains(@data-testid, 'job-list-amount')]/text( )</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div> -->
+
+        <div id="paginacao" class="conteudo">
+            <span class="destaque">Paginação se necessário</span>
+            <p>Para trabalhe conosco, não esquecer a ? após a /</p>
+            <span>Parâmetro de Paginação: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">&page=2</button><br>
+            <span>Url de Paginação ou Rota principal (exemplo): https://www.bne.com.br/trabalhe-conosco/employercuritiba/vagas-de-emprego-em-curitiba-pr/?</span>
+        </div>
+
+        <div id="descricao" class="conteudo">
+            <span class="destaque">Descrição (dentro de url_detalhe)</span>
+            <p>Para trabalhe conosco, não inserir descrição padrão por hora devido as duplicidades.</p>
+            <span>//*[@class="descriptionVacancy"][2]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <p>ou</p>
+            <p>Não inserir descrição padrão por hora, devido as duplicidades.</p>
+            <span>//*[@class="job__description job__description2"]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <button class="processador" onclick="copiarTermoPadrao(this, descricaoPadrao)">Descrição Padrão</button>
+        </div>
+    </div>
+    <script src="../scripts.js"></script>
+</body>
+
+</html>
