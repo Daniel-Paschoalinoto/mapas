@@ -4,26 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menvie 1</title>
+    <title>Menvie 3</title>
     <link rel="icon" type="image/png" sizes="160x160" href="../images/favicon-empregos-160x160.webp">
     <link rel="stylesheet" href="../styles.css">
 
 </head>
 
 <body>
-    <div id="mapa_menvie_1">
+    <div id="mapa_menvie_3">
         <div class="tooltip"></div>
         <a id=retornoLista href="../index.html">Lista de Mapas</a>
-        <p>Utilizar esse mapa quando o mural da empresa tem vários links com a palavra (Detalhes)</p>
+        <p>Utilizar esse mapa quando o mural da empresa NÃO tem links com a palavra (Detalhes)</p>
         <div id="root" class="conteudo">
             <span class="destaque">Root</span>
-            <span>//*[@class="row aos-init"]</span>
+            <span>//*[@id="lista_vagas"]//a</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
         </div>
 
         <div id="titulo" class="conteudo">
             <span class="destaque">Título</span>
-            <span>//*[@class="row aos-init"]//h2/text( )</span>
+            <span>//*[@id="lista_vagas"]//h3</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>RegexReplace: </span>
             <button class="processador" onclick="copiarTermoPadrao(this, processadorBanco)">Banco de Currículos</button>
@@ -33,13 +33,28 @@
 
         <div id="url_detalhe" class="conteudo">
             <span class="destaque">Url_detalhe (href)</span>
-            <span>//*[@class="row aos-init"]//a</span>
+            <span>//*[@id="lista_vagas"]//a</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
         </div>
         
-        <div id="salario" class="conteudo">
+        <!-- <div id="salario" class="conteudo">
             <span class="destaque">Salário</span>
             <span>//*[@class="row aos-init"]//*[contains(@class, 'icon-attach_money')]/following-sibling::span[1]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>SplitFirst: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>/
+            <span class=textoProcessador>Replace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">R$</button>/
+            <span class=textoProcessador>Replace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">à</button>
+            <span>⇄&nbsp</span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">&</button>/
+            <span class=textoProcessador>SplitFirst: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">&</button>
+        </div> -->
+        <div id="salario" class="conteudo">
+            <span class="destaque">Salário</span>
+            <span>//*[@id="lista_vagas"]//*[contains(@class, 'icon-money mr-1')]//following-sibling::text( )</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>SplitFirst: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>/
@@ -74,10 +89,10 @@
             <span class="destaque">Cidade</span>
             <span>//li[strong[contains(text(), 'Endereço:')]]/text( )[normalize-space()]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
-            <span class=textoProcessador>SplitFirst: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">/</button>/
-            <span class=textoProcessador>Replace: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>
+            <span class=textoProcessador>SplitLast: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>/
+            <span class=textoProcessador>SplitFirst </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">/</button>
         </div>
 
         <div id="estado" class="conteudo">
@@ -93,6 +108,12 @@
             <span>//li[contains(., 'Código da Vaga:')]/following-sibling::li[contains(., 'Vaga')][1]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
         </div>
+
+        <!-- <div id="total_vagas" class="conteudo">
+            <span class="destaque">Total_vagas</span>
+            <span>//li[contains(., 'Código da Vaga:')]/following-sibling::li[1]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div> -->
 
         <!-- <div id="total_vagas_site" class="conteudo">
             <span class="destaque">Total_vagas_site</span>
