@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menvie 2</title>
+    <link rel="icon" type="image/png" sizes="160x160" href="../images/favicon-empregos-160x160.webp">
+    <link rel="stylesheet" href="../styles.css">
+
+</head>
+
+<body>
+    <div id="mapa_menvie_2">
+        <div class="tooltip"></div>
+        <a id=retornoLista href="../index.html">Lista de Mapas</a>
+        <p>Esse layout é o menos utilizado nas menvies.</p>
+        <div id="root" class="conteudo">
+            <span class="destaque">Root</span>
+            <span>//*[contains(@class, 'job-item')]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <div id="titulo" class="conteudo">
+            <span class="destaque">Título</span>
+            <span>//*[contains(@class, 'job-item')]//h2</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>RegexReplace: </span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorBanco)">Banco de Currículos</button>
+            <span>⇄&nbsp</span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">Não Aplicável</button>
+        </div>
+
+        <div id="url_detalhe" class="conteudo">
+            <span class="destaque">Url_detalhe (href)</span>
+            <span>//*[contains(@class, 'job-item')]//a</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+       
+        <div id="salario" class="conteudo">
+            <span class="destaque">Salário</span>
+            <span>//div[contains(@class, 'col-md-3 text-md-right')]//strong/text( )</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>SplitFirst: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>/
+            <span class=textoProcessador>Replace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">R$</button>/
+            <span class=textoProcessador>Replace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">à</button>
+            <span>⇄&nbsp</span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">&</button>/
+            <span class=textoProcessador>SplitFirst: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">&</button>
+        </div>
+
+        <div id="paginacao" class="conteudo">
+            <span class="destaque">Paginação se necessária</span>
+            <p>Empresa não utiliza paginação.</p>
+        </div>
+
+        <div id="descricao" class="conteudo">
+            <span class="destaque">Descrição - A partir daqui dentro de url_detalhe</span>
+            <p>Verificar qual a melhor opção abrindo mais vagas, priorizar o Atividades caso a empresa preencha sempre.</p>
+            <span>//*[contains(text( ), 'Atividades')]/following-sibling::div[1]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <button class="processador" onclick="copiarTermoPadrao(this, descricaoPadrao)">Descrição Padrão</button>
+            <p>ou</p>
+            <span>//*[contains(text( ), 'Descrição')]/following-sibling::div[1]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <button class="processador" onclick="copiarTermoPadrao(this, descricaoPadrao)">Descrição Padrão</button>
+        </div>
+
+        <div id="cidade" class="conteudo">
+            <span class="destaque">Cidade</span>
+            <span>//li[strong[contains(text(), 'Endereço:')]]/text( )[normalize-space()]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>SplitLast: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>/
+            <span class=textoProcessador>SplitFirst </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">/</button>
+        </div>
+
+        <div id="estado" class="conteudo">
+            <span class="destaque">Estado</span>
+            <span>//li[strong[contains(text(), 'Endereço:')]]/text( )[normalize-space()]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>SplitLast: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">/</button>
+        </div>
+
+        <!-- <div id="total_vagas" class="conteudo">
+            <span class="destaque">Total_vagas</span>
+            <p>Identificar padrão da empresa, caso exista e captar campo.</p>
+            <span>//li[contains(., 'Código da Vaga')]/following-sibling::li[contains(., 'Vaga')][1]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <p>ou</p>
+            <span>//h3[contains(., 'Mais informações')]/following-sibling::ul/li[contains(., 'Vaga')]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div> -->
+
+        <!-- <div id="total_vagas" class="conteudo">
+            <span class="destaque">Total_vagas</span>
+            <span>//li[contains(., 'Código da Vaga:')]/following-sibling::li[1]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div> -->
+
+        <!-- <div id="total_vagas_site" class="conteudo">
+            <span class="destaque">Total_vagas_site</span>
+            <span>(//div[@class='box box-640 esquerda']//strong[contains(., 'vagas')])[1]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div> -->
+
+        <!-- <div id="total_anuncios_site" class="conteudo">
+            <span class="destaque">Total_anuncios_site</span>
+            <span>(//div[@class='box box-640 esquerda']//strong[contains(., 'anúncios')])[1]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <div id="paginacao" class="conteudo">
+            <span class="destaque">Paginação quando necessário</span>
+            <span>Parâmetro de Paginação: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">?page=2</button><br>
+            <span>Url de Paginação ou Rota principal (exemplo): https://esrh.selecty.com.br/search/</span>
+        </div> -->
+
+        
+    </div>
+    <script src="../scripts.js"></script>
+</body>
+
+</html>
