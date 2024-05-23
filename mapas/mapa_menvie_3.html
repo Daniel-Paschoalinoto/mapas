@@ -105,8 +105,13 @@
 
         <div id="total_vagas" class="conteudo">
             <span class="destaque">Total_vagas</span>
+            <p>Identificar padrão da empresa, caso exista e captar campo.</p>
             <span>//li[contains(., 'Código da Vaga')]/following-sibling::li[contains(., 'Vaga')][1]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <p>ou</p>
+            <span>//h3[contains(., 'Mais informações')]/following-sibling::ul/li[contains(., 'Vaga')]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            
         </div>
 
         <!-- <div id="total_vagas" class="conteudo">
