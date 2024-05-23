@@ -61,7 +61,7 @@
         <div id="descricao" class="conteudo">
             <span class="destaque">Descrição - A partir daqui dentro de url_detalhe</span>
             <p>Não utilizar Atividades como referência, o dev insere um comentário dentro de um p com estilos da página e o Orion divulga.</p>
-            <span>//h5[text()='Descrição']/following-sibling::div[1]</span>
+            <span>//h5[contains(text( ), 'Descrição')]/following-sibling::div[1]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <button class="processador" onclick="copiarTermoPadrao(this, descricaoPadrao)">Descrição Padrão</button>
         </div>

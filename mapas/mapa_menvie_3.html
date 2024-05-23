@@ -76,11 +76,11 @@
         <div id="descricao" class="conteudo">
             <span class="destaque">Descrição - A partir daqui dentro de url_detalhe</span>
             <p>Verificar qual a melhor opção abrindo mais vagas, priorizar o Atividades caso a empresa preencha sempre.</p>
-            <span>//h5[text()='Atividades']/following-sibling::div[1]</span>
+            <span>//h5[contains(text( ), 'Atividades')]/following-sibling::div[1]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <button class="processador" onclick="copiarTermoPadrao(this, descricaoPadrao)">Descrição Padrão</button>
             <p>ou</p>
-            <span>//h5[text()='Descrição']/following-sibling::div[1]</span>
+            <span>//h5[contains(text( ), 'Descrição')]/following-sibling::div[1]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <button class="processador" onclick="copiarTermoPadrao(this, descricaoPadrao)">Descrição Padrão</button>
         </div>
