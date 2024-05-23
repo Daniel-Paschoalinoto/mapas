@@ -61,10 +61,12 @@
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
         </div>
 
-        <!-- <div id="paginacao" class="conteudo">
-            <span class="destaque">Paginação se necessária</span>
-            <p>Empresa não utiliza paginação.</p>
-        </div> -->
+        <div id="paginacao" class="conteudo">
+            <span class="destaque">Paginação (intercept) quando necessário: </span>
+            <span>Parâmetro de Paginação: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">?page=2</button><br>
+            <span>Url de Paginação ou Rota principal (exemplo):  https://api-v2.burh.com.br/api/company/career/grupopanna/jobs</span>
+        </div>
 
         <div id="descricao" class="conteudo">
             <span class="destaque">Descrição (dentro de url_detalhe)</span>
