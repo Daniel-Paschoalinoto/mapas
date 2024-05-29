@@ -14,16 +14,17 @@
     <div id="mapa_selecty">
         <div class="tooltip"></div>
         <a id=retornoLista href="../index.html">Lista de Mapas</a>
+        <p>Sempre mapear na rota /search</p>
 
         <div id="root" class="conteudo">
             <span class="destaque">Root</span>
-            <span>//*[@class='box box-640 esquerda']/following::*[@class='box vaga']</span>
+            <span>//*[@class='box box-640 esquerda']//*[contains(@class,'box vaga')]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
         </div>
 
         <div id="titulo" class="conteudo">
             <span class="destaque">Título</span>
-            <span>//*[@class='box box-640 esquerda']/following::*[@class='box vaga']//h2</span>
+            <span>//*[@class='box box-640 esquerda']//*[contains(@class,'box vaga')]//h2</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>RegexReplace: </span>
             <button class="processador" onclick="copiarTermoPadrao(this, processadorBanco)">Banco de Currículos</button>
@@ -33,15 +34,15 @@
 
         <div id="descricao" class="conteudo">
             <span class="destaque">Descrição</span>
-            <span>//*[@class='box box-640 esquerda']/following::*[@class='box vaga']//p[1]</span>
+            <span>//*[@class='box box-640 esquerda']//*[contains(@class,'box vaga')]//p[1]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class="textoProcessador">Replace: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">...</button>/
             <span class="textoProcessador">RegexReplace: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">^(.*)\.[^.]*$</button>
             <span>⇄&nbsp</span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">$1</button>/
-            <span class="textoProcessador">RegexReplace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">$1</button>
+            <span class="textoProcessador">e/ou RegexReplace: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">^(.*);[^;]*$</button>
             <span>⇄&nbsp</span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">$1</button>
@@ -50,7 +51,7 @@
         <div id="cidade" class="conteudo">
             <span class="destaque">Cidade</span>
             <p>Manter espaços no ' em '</p>
-            <span>//*[@class='box box-640 esquerda']/following::*[@class='box vaga']//h2</span>
+            <span>//*[@class='box box-640 esquerda']//*[contains(@class,'box vaga')]//h2</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>RegexReplace: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">&nbspem&nbsp</button>
@@ -64,7 +65,7 @@
 
         <div id="estado" class="conteudo">
             <span class="destaque">Estado</span>
-            <span>//*[@class='box box-640 esquerda']/following::*[@class='box vaga']//h2</span>
+            <span>//*[@class='box box-640 esquerda']//*[contains(@class,'box vaga')]//h2</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>RegexMatch: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">-.+</button>/&nbsp
