@@ -21,6 +21,16 @@
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
         </div>
 
+        <div id="titulo" class="conteudo">
+            <span class="destaque">Título</span>
+            <span>//*[@class='box box-640 esquerda']/following::*[@class='box vaga']//h2</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>RegexReplace: </span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorBanco)">Banco de Currículos</button>
+            <span>⇄&nbsp</span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">Não Aplicável</button>
+        </div>
+
         <div id="descricao" class="conteudo">
             <span class="destaque">Descrição</span>
             <span>//*[@class='box box-640 esquerda']/following::*[@class='box vaga']//p[1]</span>
@@ -35,16 +45,6 @@
             <button class="processador" onclick="copiarTextoDoBotao(this)">^(.*);[^;]*$</button>
             <span>⇄&nbsp</span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">$1</button>
-        </div>
-
-        <div id="titulo" class="conteudo">
-            <span class="destaque">Título</span>
-            <span>//*[@class='box box-640 esquerda']/following::*[@class='box vaga']//h2</span>
-            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
-            <span class=textoProcessador>RegexReplace: </span>
-            <button class="processador" onclick="copiarTermoPadrao(this, processadorBanco)">Banco de Currículos</button>
-            <span>⇄&nbsp</span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">Não Aplicável</button>
         </div>
 
         <div id="cidade" class="conteudo">
