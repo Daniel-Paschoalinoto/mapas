@@ -21,6 +21,22 @@
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
         </div>
 
+        <div id="descricao" class="conteudo">
+            <span class="destaque">Descrição</span>
+            <span>//*[@class='box box-640 esquerda']/following::*[@class='box vaga']//p[1]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class="textoProcessador">Replace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">...</button>/
+            <span class="textoProcessador">RegexReplace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">^(.*)\.[^.]*$</button>
+            <span>⇄&nbsp</span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">$1</button>/
+            <span class="textoProcessador">RegexReplace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">^(.*);[^;]*$</button>
+            <span>⇄&nbsp</span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">$1</button>
+        </div>
+
         <div id="titulo" class="conteudo">
             <span class="destaque">Título</span>
             <span>//*[@class='box box-640 esquerda']/following::*[@class='box vaga']//h2</span>
@@ -56,6 +72,13 @@
             <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>
         </div>
 
+        <div id="paginacao" class="conteudo">
+            <span class="destaque">Paginação quando necessário</span>
+            <span>Parâmetro de Paginação: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">?page=2</button><br>
+            <span>Url de Paginação ou Rota principal (exemplo): https://esrh.selecty.com.br/search/</span>
+        </div>
+
         <div id="total_vagas_site" class="conteudo">
             <span class="destaque">Total_vagas_site</span>
             <span>(//div[@class='box box-640 esquerda']//strong[contains(., 'vagas')])[1]</span>
@@ -66,29 +89,6 @@
             <span class="destaque">Total_anuncios_site</span>
             <span>(//div[@class='box box-640 esquerda']//strong[contains(., 'anúncios')])[1]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
-        </div>
-
-        <div id="paginacao" class="conteudo">
-            <span class="destaque">Paginação quando necessário</span>
-            <span>Parâmetro de Paginação: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">?page=2</button><br>
-            <span>Url de Paginação ou Rota principal (exemplo): https://esrh.selecty.com.br/search/</span>
-        </div>
-
-        <div id="descricao" class="conteudo">
-            <span class="destaque">Descrição</span>
-            <span>//*[@class='box box-640 esquerda']/following::*[@class='box vaga']//p[1]</span>
-            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
-            <span class="textoProcessador">Replace: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">...</button>/
-            <span class="textoProcessador">RegexReplace: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">^(.*)\.[^.]*$</button>
-            <span>⇄&nbsp</span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">$1</button>/
-            <span class="textoProcessador">RegexReplace: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">^(.*);[^;]*$</button>
-            <span>⇄&nbsp</span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">$1</button>
         </div>
     </div>
     <script src="../scripts.js"></script>
