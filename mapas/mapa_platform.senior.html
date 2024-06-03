@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform.Senior</title>
+    <link rel="icon" type="image/png" sizes="160x160" href="../images/favicon-empregos-160x160.webp">
+    <link rel="stylesheet" href="../styles.css">
+
+</head>
+
+<body>
+    <div id="mapa_platform_senior">
+        <div class="tooltip"></div>
+        <a id=retornoLista href="../index.html">Lista de Mapas</a>
+
+        <div id="root" class="conteudo">
+            <span class="destaque">Root</span>
+            <span>//*[@class="portlet-body"]/div[position() > 1 and position() < last()]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <div id="titulo" class="conteudo">
+            <span class="destaque">Título</span>
+            <span>//*[@class="portlet-body"]/div[position() > 1 and position() < last()]//h4</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>RegexReplace: </span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorBanco)">Banco de Currículos</button>
+            <span>⇄&nbsp</span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">Não Aplicável</button>
+        </div>
+
+        <div id="cidade" class="conteudo">
+            <span class="destaque">Cidade</span>
+            <span>//*[@class="portlet-body"]/div[position() > 1 and position() < last()]//span</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>SplitFirst: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>/
+            <span class=textoProcessador>SplitFirst: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">/</button>
+        </div>
+
+        <div id="estado" class="conteudo">
+            <span class="destaque">Estado</span>
+            <span>//*[@class="portlet-body"]/div[position() > 1 and position() < last()]//span</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>SplitLast: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>/&nbsp
+            <span class=textoProcessador>SplitLast: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">/</button>
+        </div>
+
+        <div id="url_detalhe" class="conteudo">
+            <span class="destaque">Url_detalhe (click)</span>
+            <span>//*[@class="portlet-body"]/div[position() > 1 and position() < last()]//a</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <!-- <div id="salario" class="conteudo">
+            <span class="destaque">Salário</span>
+            <span>//*[contains(@class, 'wallet')]/parent::div/following-sibling::text( )</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>Splifirst: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>/
+            <span class=textoProcessador>Replace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">R$</button>
+        </div>
+
+        <div id="total_vagas" class="conteudo">
+            <span class="destaque">Total_vagas</span>
+            <span>//*[contains(@class, 'candidates')]/parent::div/following-sibling::text( )</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div> -->
+
+        <div id="total_anuncios_site" class="conteudo">
+            <span class="destaque">Total_anuncios_site</span>
+            <span>//small[contains(text( ), 'encontrada')]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <div id="paginacao" class="conteudo">
+            <span class="destaque">Paginação quando necessário: </span>
+            <span>Parâmetro de Paginação: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">eval</button><br>
+            <span>Url de Paginação ou Rota principal (exemplo): </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">script</button>/
+            <span>Script: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">document.querySelector("#pagina-next").click()</button>
+        </div>
+
+        <div id="descricao" class="conteudo">
+            <span class="destaque">Descrição (dentro de url_detalhe)</span>
+            <span>//*[@class="col-xs-12 vacancy-description ng-binding"]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+    </div>
+    <script src="../scripts.js"></script>
+</body>
+
+</html>
