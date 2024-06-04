@@ -28,7 +28,7 @@
             <span>//*[@id="jobs"]//a/text( )</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <p>ou</p>
-            <span>//*[@id="jobs"]//h5/text( )[normalize-space()]</span>
+            <span>//*[@class="card"]//h5/text( )[normalize-space()]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button><br><br>
             <span class=textoProcessador>RegexReplace: </span>
             <button class="processador" onclick="copiarTermoPadrao(this, processadorBanco)">Banco de Currículos</button>
@@ -39,6 +39,9 @@
         <div id="url_detalhe" class="conteudo">
             <span class="destaque">Url_detalhe (href)</span>
             <span>//*[@id="jobs"]//a</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <p>ou</p>
+            <span>//*[@class="card"]//a</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
         </div>
 
@@ -70,15 +73,12 @@
             <span class=textoProcessador>Replace: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>
         </div>
-
 <!-- 
         <div id="total_anuncios_site" class="conteudo">
             <span class="destaque">Total_anuncios_site</span>
             <span>//*[contains(@data-testid, 'job-list-amount')]/text( )</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
         </div> -->
-
-        
 
     </div>
     <script src="../scripts.js"></script>
