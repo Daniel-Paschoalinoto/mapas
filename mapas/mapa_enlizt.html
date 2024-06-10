@@ -15,15 +15,14 @@
         <a id=retornoLista href="../index.html">Lista de Mapas</a>
 
         <div id="root" class="conteudo">
-            <p>Caso na última posição a empresa não insira uma li adicional (cadastre seu currículo...), remova os parênteses e o position de cada expressão.</p>
             <span class="destaque">Root</span>
-            <span>(//article[contains(@class,'department-list')]//a)[position() < last()]</span>
+            <span>//article[@data-department and contains(@class, 'department-list')]//a</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
         </div>
 
         <div id="titulo" class="conteudo">
             <span class="destaque">Título</span>
-            <span>(//article[contains(@class,'department-list')]//a)[position() < last()]//span[1]</span>
+            <span>//article[@data-department and contains(@class, 'department-list')]//span[1]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>RegexReplace: </span>
             <button class="processador" onclick="copiarTermoPadrao(this, processadorBanco)">Banco de Currículos</button>
@@ -33,7 +32,7 @@
 
         <div id="cidade" class="conteudo">
             <span class="destaque">Cidade</span>
-            <span>(//article[contains(@class,'department-list')]//a)[position() < last()]//span[2]</span>
+            <span>//article[@data-department and contains(@class, 'department-list')]//span[2]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>SplitFirst: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">,</button>
@@ -41,7 +40,7 @@
 
         <div id="estado" class="conteudo">
             <span class="destaque">Estado</span>
-            <span>(//article[contains(@class,'department-list')]//a)[position() < last()]//span[2]</span>
+            <span>//article[@data-department and contains(@class, 'department-list')]//span[2]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>RegexMatch: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">,.+</button>/&nbsp
@@ -51,7 +50,7 @@
 
         <div id="url_detalhe" class="conteudo">
             <span class="destaque">Url_detalhe (href)</span>
-            <span>(//article[contains(@class,'department-list')]//a)[position() < last()]</span>
+            <span>//article[@data-department and contains(@class, 'department-list')]//a</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
         </div>
 
@@ -62,8 +61,6 @@
 
         <div id="descricao" class="conteudo">
             <span class="destaque">Descrição (dentro de url_detalhe)</span>
-            <p>Para inserir a descrição, dê o ctrl click normalmente em url_detalhe e insira a expressão. A url não irá ser acessada, porém em execução o Orion pegará os dados corretos.</p>
-            <p>Checkar referrer da descrição com url_detalhe.</p>
             <span>//*[@class="markdown-body"]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
         </div>
