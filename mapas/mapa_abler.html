@@ -23,7 +23,7 @@
 
         <div id="titulo" class="conteudo">
             <span class="destaque">Título</span>
-            <span>//*[@id="list-vacancy"]//tr[not(ancestor::thead)]//td[1]</span>
+            <span>//tr[not(ancestor::thead)]//td[1]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>RegexReplace: </span>
             <button class="processador" onclick="copiarTermoPadrao(this, processadorBanco)">Banco de Currículos</button>
@@ -39,7 +39,7 @@
 
         <div id="cidade" class="conteudo">
             <span class="destaque">Cidade</span>
-            <span>//*[@id="list-vacancy"]//tr[not(ancestor::thead)]//td[5]</span>
+            <span>//tr[not(ancestor::thead)]//td[5]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>SplitLast: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">,</button>/
@@ -54,7 +54,7 @@
 
         <div id="estado" class="conteudo">
             <span class="destaque">Estado</span>
-            <span>//*[@id="list-vacancy"]//tr[not(ancestor::thead)]//td[5]</span>
+            <span>//tr[not(ancestor::thead)]//td[5]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>RegexMatch: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">-.+</button>/
@@ -64,7 +64,7 @@
 
         <div id="url_detalhe" class="conteudo">
             <span class="destaque">Url_detalhe (href)</span>
-            <span>//*[@id="list-vacancy"]//tr[not(ancestor::thead)]//td[1]/a</span>
+            <span>//tr[not(ancestor::thead)]//td[1]/a</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
         </div>
 
