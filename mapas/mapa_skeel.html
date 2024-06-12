@@ -76,11 +76,11 @@
 
         <div id="salario" class="conteudo">
             <span class="destaque">Salário</span>
-            <p>Inserir campo e processadores mesmo que o campo não puxe nada.</p>
+            <p>Inserir campo e processadores mesmo que o campo não puxe nada, manter espaços no ' a '</p>
             <span>(//*[contains(.,'SALÁRIO')]/following-sibling::div[1])[1]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>Replace: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">a</button>
+            <button class="processador" onclick="copiarTextoDoBotao(this)"><pre> a </pre></button>
             <span>⇄&nbsp</span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">&</button>/
             <span class=textoProcessador>SplitFirst: </span>
