@@ -17,13 +17,13 @@
 
         <div id="root" class="conteudo">
             <span class="destaque">Root</span>
-            <span>//*[@id="ctl00_phMasterPage_cGrid_gridResults"]/ul/li</span>
+            <span>//*[contains(@id,'gridResults')]//li</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
         </div>
 
         <div id="titulo" class="conteudo">
             <span class="destaque">Título</span>
-            <span>//*[@id="ctl00_phMasterPage_cGrid_gridResults"]/ul/li/a/div[1]</span>
+            <span>//div[contains(@id,'Name')]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>RegexReplace: </span>
             <button class="processador" onclick="copiarTermoPadrao(this, processadorBanco)">Banco de Currículos</button>
@@ -33,7 +33,7 @@
 
         <div id="cidade" class="conteudo">
             <span class="destaque">Cidade</span>
-            <span>//*[@id="ctl00_phMasterPage_cGrid_gridResults"]/ul/li/a/div/span[2]</span>
+            <span>//span[contains(@id,'Location')]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>SplitFirst: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>
@@ -41,7 +41,7 @@
 
         <div id="estado" class="conteudo">
             <span class="destaque">Estado</span>
-            <span>//*[@id="ctl00_phMasterPage_cGrid_gridResults"]/ul/li/a/div/span[2]</span>
+            <span>//span[contains(@id,'Location')]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>RegexMatch: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">-.+</button>/&nbsp
@@ -51,19 +51,21 @@
 
         <div id="url_detalhe" class="conteudo">
             <span class="destaque">Url_detalhe (href)</span>
-            <span>//*[@id="ctl00_phMasterPage_cGrid_gridResults"]/ul/li/a</span>
+            <span>//*[contains(@id,'gridResults')]//a</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
         </div>
 
         <div id="total_vagas_site" class="conteudo">
             <span class="destaque">Total_vagas_site</span>
-            <span>//*[@id="ctl00_phMasterPage_cHeader_cTabs_cTabsDetailed_TabEmployment"]</span>
+            <span>//div[contains(text( ), 'anúncio') and contains(text( ), 'emprego')]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>RegexMatch: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">.+de</button>
         </div>
 
         <div id="total_anuncios_site" class="conteudo">
             <span class="destaque">Total_anuncios_site</span>
-            <span>//*[@id="ctl00_phMasterPage_cGrid_gridResults"]/div[1]</span>
+            <span>//div[contains(text( ), 'anúncio') and contains(text( ), 'emprego')]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>RegexMatch: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">de.+</button>
@@ -74,15 +76,12 @@
             <span>Parâmetro de Paginação: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">?&pn=2</button><br>
             <span class="textoProcessador">Url de Paginação ou Rota principal (exemplo): </span>
-            <span>https://www.infojobs.com.br/emprego-consultare-rh__63200.aspx ou https://www.infojobs.com.br/focco-servicos-terceirizados/vagas</span><br>
-            <span class="textoProcessador">Xpath identificação paginação (para usar no bot): </span>
-            <span>//*[@id="ctl00_phMasterPage_cGrid_cPaginator_divPaginator"]/ul/li[2]</span>
-            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span>https://www.infojobs.com.br/emprego-consultare-rh__63200.aspx ou https://www.infojobs.com.br/focco-servicos-terceirizados/vagas</span>
         </div>
 
         <div id="descricao" class="conteudo">
             <span class="destaque">Descrição (dentro de url_detalhe à partir daqui)</span>
-            <span>//*[@id="detailContainer"]/div/form/div[2]/p[1]</span>
+            <span>//*[@id="VacancyHeader"]/following-sibling::div[1]/p[1]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
         </div>
 
