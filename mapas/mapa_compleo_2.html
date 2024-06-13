@@ -22,7 +22,7 @@
 
         <div id="titulo" class="conteudo">
             <span class="destaque">Título</span>
-            <span>//*[@class="MuiCardContent-root-444"]//span[contains(@class,'MuiButton-label-243')]/text( )</span>
+            <span>//*[@id="__next"]//div[1]/div/div[1]/a</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>RegexReplace: </span>
             <button class="processador" onclick="copiarTermoPadrao(this, processadorBanco)">Banco de Currículos</button>
@@ -74,7 +74,7 @@
 
         <div id="descricao" class="conteudo">
             <span class="destaque">Descrição (dentro de url_detalhe)</span>
-            <span>//div[contains(.,'Atividades:')]/following-sibling::ul[1]</span>
+            <span>//*[contains(.,'Atividades:')]/following-sibling::ul[1]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
         </div>
     </div>
