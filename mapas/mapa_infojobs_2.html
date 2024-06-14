@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infojobs 2</title>
+    <link rel="icon" type="image/png" sizes="160x160" href="../images/favicon-empregos-160x160.webp">
+    <link rel="stylesheet" href="../styles.css">
+
+</head>
+
+<body>
+    <div id="mapa_infojobs_2">
+        <div class="tooltip"></div>
+        <a id=retornoLista href="../index.html">Lista de Mapas</a>
+
+        <div id="root" class="conteudo">
+            <span class="destaque">Root</span>
+            <span>//ol[@id and contains(@class, 'gridRow')]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <div id="titulo" class="conteudo">
+            <span class="destaque">Título</span>
+            <span>//a[contains(@class, 'vagaTitle')]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>RegexReplace: </span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorBanco)">Banco de Currículos</button>
+            <span>⇄&nbsp</span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">Não Aplicável</button>
+        </div>
+
+        <div id="url_detalhe" class="conteudo">
+            <span class="destaque">Url_detalhe (href)</span>
+            <span>//a[contains(@class, 'vagaTitle')]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <div id="paginacao" class="conteudo">
+            <span class="destaque">Paginação se necessária</span>
+            <span>Parâmetro de Paginação: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">?page=2</button><br>
+            <span class="textoProcessador">Url de Paginação ou Rota principal (exemplo): </span>
+            <span>https://innovare-inclusiva.infojobs.com.br/empregos.aspx</span>
+        </div>
+
+        <div id="descricao" class="conteudo">
+            <span class="destaque">Descrição (dentro de url_detalhe à partir daqui)</span>
+            <span>//div[contains(@class,'content')]/ol[1]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <div id="cidade" class="conteudo">
+            <span class="destaque">Cidade</span>
+            <span>//span[contains(@id,'litLocation')]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>SplitFirst: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">,</button>
+        </div>
+
+        <div id="estado" class="conteudo">
+            <span class="destaque">Estado</span>
+            <span>//span[contains(@id,'litLocation')]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>RegexMatch: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">,.+</button>/&nbsp
+            <span class=textoProcessador>Replace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">,</button>
+        </div>
+
+        <div id="total_vagas" class="conteudo">
+            <span class="destaque">Total_vagas</span>
+            <span>//li[contains(., 'Número de vagas:')]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+    </div>
+    <script src="../scripts.js"></script>
+</body>
+
+</html>
