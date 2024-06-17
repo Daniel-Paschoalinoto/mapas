@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSI 2</title>
+    <link rel="icon" type="image/png" sizes="160x160" href="../images/favicon-empregos-160x160.webp">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <div id="mapa_ssi_2">
+        <div class="tooltip"></div>
+        <a id=retornoLista href="../index.html">Lista de Mapas</a>
+
+        <div id="root" class="conteudo">
+            <span class="destaque">Root</span>
+            <span>//*[contains(@id,'conteudo')]//*[contains(@class,'btn-vaga')]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <div id="titulo" class="conteudo">
+            <span class="destaque">Título</span>
+            <span>//*[contains(@class,'box-titulo-vaga')]/div[1]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>RegexReplace: </span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorBanco)">Banco de Currículos</button>
+            <span>⇄&nbsp</span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">Não Aplicável</button>
+        </div>
+
+        <div id="cidade" class="conteudo">
+            <span class="destaque">Cidade</span>
+            <span>//*[@data-icon="map-marker-alt"]/../../text( )</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>SplitFirst: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>
+        </div>
+
+        <div id="estado" class="conteudo">
+            <span class="destaque">Estado</span>
+            <span>//*[@data-icon="map-marker-alt"]/../../text( )</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>RegexMatch: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">-.+</button>/
+            <span class=textoProcessador>Replace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>
+        </div>
+
+        <div id="url_detalhe" class="conteudo">
+            <span class="destaque">Url_detalhe (click)</span>
+            <span>//*[contains(@class,'box-titulo-vaga')]/div[1]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <div id="paginacao" class="conteudo">
+            <span class="destaque">Paginação quando necessário</span>
+            <span>Parâmetro de Paginação: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">?pagina=2</button><br>
+            <span>Url de Paginação ou Rota principal (exemplo): https://ssi.workingcenter.com.br/vagas</span>
+        </div>
+
+        <div id="total_anuncios_site" class="conteudo">
+            <span class="destaque">Total_anuncios_site</span>
+            <span>//div[contains(text( ),'Total de anúncios:')]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <div id="descricao" class="conteudo">
+            <span class="destaque">Descrição (dentro de url_detalhe à partir daqui)</span>
+            <span>//*[@class="imagenet-vaga-item"][1]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <div id="total_vagas" class="conteudo">
+            <span class="destaque">Total_vagas</span>
+            <span>//span[contains(text( ),'Número de vagas:')]/following-sibling::text( )</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+    </div>
+    <script src="../scripts.js"></script>
+</body>
+
+</html>
