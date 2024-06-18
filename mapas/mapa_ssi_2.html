@@ -30,6 +30,12 @@
             <button class="processador" onclick="copiarTextoDoBotao(this)">Não Aplicável</button>
         </div>
 
+        <div id="descricao" class="conteudo">
+            <span class="destaque">Descrição</span>
+            <span>//*[contains(@class,'resumo-vaga')]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
         <div id="cidade" class="conteudo">
             <span class="destaque">Cidade</span>
             <span>//*[@data-icon="map-marker-alt"]/../../text( )</span>
@@ -48,11 +54,11 @@
             <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>
         </div>
 
-        <div id="url_detalhe" class="conteudo">
+        <!-- <div id="url_detalhe" class="conteudo">
             <span class="destaque">Url_detalhe (click)</span>
             <span>//*[contains(@class,'box-titulo-vaga')]/div[1]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
-        </div>
+        </div> -->
 
         <div id="paginacao" class="conteudo">
             <span class="destaque">Paginação quando necessário</span>
@@ -67,17 +73,11 @@
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
         </div>
 
-        <div id="descricao" class="conteudo">
-            <span class="destaque">Descrição (dentro de url_detalhe à partir daqui)</span>
-            <span>//*[@class="imagenet-vaga-item"][1]</span>
-            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
-        </div>
-
-        <div id="total_vagas" class="conteudo">
+        <!-- <div id="total_vagas" class="conteudo">
             <span class="destaque">Total_vagas</span>
             <span>//span[contains(text( ),'Número de vagas:')]/following-sibling::text( )</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
-        </div>
+        </div> -->
 
     </div>
     <script src="../scripts.js"></script>
