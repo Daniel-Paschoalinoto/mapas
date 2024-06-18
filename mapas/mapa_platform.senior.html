@@ -45,10 +45,14 @@
             <span class="destaque">Estado</span>
             <span>//*[@class="portlet-body"]/div[position() > 1 and position() < last()]//span</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
-            <span class=textoProcessador>SplitLast: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>/&nbsp
-            <span class=textoProcessador>SplitLast: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">/</button>
+            <span class=textoProcessador>RegexMatch: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">-.+</button>/&nbsp
+            <span class=textoProcessador>RegexMatch: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">/.+</button>/&nbsp
+            <span class=textoProcessador>Replace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">/</button>/&nbsp
+            <span class=textoProcessador>Replace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>
         </div>
 
         <div id="url_detalhe" class="conteudo">
@@ -86,7 +90,7 @@
             <span>Url de Paginação ou Rota principal (exemplo): </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">script</button>/
             <span>Script: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">document.querySelector("#pagina-next").click()</button>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">document.querySelector("[ng-click='selectPage(page + 1, $event)']").click()</button>
         </div>
 
         <div id="descricao" class="conteudo">
