@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kombo</title>
+    <link rel="icon" type="image/png" sizes="160x160" href="../images/favicon-empregos-160x160.webp">
+    <link rel="stylesheet" href="../styles.css">
+
+</head>
+
+<body>
+    <div id="mapa_kombo">
+        <div class="tooltip"></div>
+        <a id=retornoLista href="../index.html">Lista de Mapas</a>
+<p>O cid no link se trata do termo "Company ID", a estrutura de todos os urls antes do cid deve ser https://www.kombo.com.br/curriculo/visualizar_todas.php?buscar=1&</p>
+        <div id="root" class="conteudo">
+            <span class="destaque">Root</span>
+            <span>//div[contains(@class,'tabelaBuscaVagas')]//tr[not(ancestor::thead) and not(ancestor::tfoot)]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <div id="titulo" class="conteudo">
+            <span class="destaque">Título</span>
+            <span>//tr[not(ancestor::thead) and not(ancestor::tfoot)]/td[2]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>RegexReplace: </span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorBanco)">Banco de Currículos</button>
+            <span>⇄&nbsp</span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">Não Aplicável</button>
+        </div>
+
+        <div id="cidade" class="conteudo">
+            <span class="destaque">Cidade</span>
+            <span>//tr[not(ancestor::thead) and not(ancestor::tfoot)]/td[6]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>SplitFirst: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>
+        </div>
+
+        <div id="estado" class="conteudo">
+            <span class="destaque">Estado</span>
+            <span>//tr[not(ancestor::thead) and not(ancestor::tfoot)]/td[6]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>RegexMatch: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">-.+</button>/
+            <span class=textoProcessador>Replace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>
+        </div>
+
+        <div id="url_detalhe" class="conteudo">
+            <span class="destaque">Url_detalhe (click)</span>
+            <span>//tr[not(ancestor::thead) and not(ancestor::tfoot)]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <div id="paginacao" class="conteudo">
+            <span class="destaque">Paginação quando necessário</span>
+            <span>Parâmetro de Paginação: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">&pag=2</button><br>
+            <span>Url de Paginação ou Rota principal (exemplo): https://www.kombo.com.br/curriculo/visualizar_todas.php?buscar=1&cid=NDQzMS0w</span>
+        </div>
+
+        <div id="total_vagas" class="conteudo">
+            <span class="destaque">Total_vagas</span>
+            <span>//tr[not(ancestor::thead) and not(ancestor::tfoot)]/td[5]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <div id="total_vagas_site" class="conteudo">
+            <span class="destaque">Total_vagas_site</span>
+            <span>//span[contains(text( ),'Encontrada')]/b</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <div id="descricao" class="conteudo">
+            <span class="destaque">Descrição (Dentro de url detalhe)</span>
+            <p>veja mais vagas para adequar a palabra buscada se necessário</p>
+            <span>//tr[contains(.,'Observações')]/td[2]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        
+
+    </div>
+    <script src="../scripts.js"></script>
+</body>
+
+</html>
