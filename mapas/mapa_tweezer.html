@@ -24,16 +24,20 @@
 
         <div id="titulo" class="conteudo">
             <span class="destaque">Título</span>
-            <span>//*[@id="vagas_selecionadas"]/div/div/div/div[1]/h5/a</span>
+            <span>//div[@id='vagas_selecionadas']//h5/a/text( )[not(parent::span)][1]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>RegexReplace: </span>
             <button class="processador" onclick="copiarTermoPadrao(this, processadorBanco)">Banco de Currículos</button>
             <span>⇄&nbsp</span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">Não Aplicável</button>/
-            <span class=textoProcessador>SplitFirst: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">#</button>/
-            <span class=textoProcessador>SplitFirst: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>
+            <span class=textoProcessador>Replace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">...</button>/
+            <span class=textoProcessador>Replace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>/
+            <span class=textoProcessador>Replace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">(</button>/
+            <span class=textoProcessador>RegexReplace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">(\s+\w{1,3})$</button>
         </div>
 
         <div id="descricao" class="conteudo">
@@ -45,7 +49,7 @@
 
         <div id="cidade" class="conteudo">
             <span class="destaque">Cidade</span>
-            <span>//*[@id="vagas_selecionadas"]/div/div/div/div[1]/p/span[1]</span>
+            <span>//*[@class="vaga_endereco"]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>SplitFirst: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">-</button><br>
@@ -53,7 +57,7 @@
 
         <div id="estado" class="conteudo">
             <span class="destaque">Estado</span>
-            <span>//*[@id="vagas_selecionadas"]/div/div/div/div[1]/p/span[1]</span>
+            <span>//*[@class="vaga_endereco"]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>RegexMatch: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">-.+</button>/&nbsp
@@ -69,30 +73,22 @@
 
         <div id="total_vagas" class="conteudo">
             <span class="destaque">Total_vagas</span>
-            <span>//*[@id="vagas_selecionadas"]/div/div/div/div[1]/p/span[2]/small</span>
+            <span>//div[@id='vagas_selecionadas']//span[2]/small</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
         </div>
 
         <div id="total_anuncios_site" class="conteudo">
             <span class="destaque">Total_anuncios_site</span>
-            <span>//h4[contains(@class,'counter-vagas')]</span>
+            <span>//h4[contains(text( ),'carregada')]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
-            <span class=textoProcessador>RegexReplace: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">de</button>
-            <span>⇄&nbsp</span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>/
-            <span class=textoProcessador>SplitLast: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>
         </div>
 
         <div id="paginacao" class="conteudo">
             <span class="destaque">Paginação quando necessário (Intercept)</span>
-            <p></p>
             <span>Parâmetro de Paginação: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">&page=2</button><br>
             <span>Url de Paginação ou Rota principal (exemplo): https://mrh.tweezer.jobs/candidato/vaga/buscar_vaga/json/</span>
         </div>
-
         
     </div>
     <script src="../scripts.js"></script>
