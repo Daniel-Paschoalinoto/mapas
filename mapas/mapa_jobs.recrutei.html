@@ -33,7 +33,7 @@
 
         <div id="cidade" class="conteudo">
             <span class="destaque">Cidade</span>
-            <span>//*[@id="vacancies"]//a//h4</span>
+            <span>//*[contains(@data-icon,'map-location')]/following-sibling::text( )</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>SpliFirst: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">,</button>
@@ -41,7 +41,7 @@
 
         <div id="estado" class="conteudo">
             <span class="destaque">Estado</span>
-            <span>//*[@id="vacancies"]//a//h4</span>
+            <span>//*[contains(@data-icon,'map-location')]/following-sibling::text( )</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>RegexMatch: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">,.+</button>/&nbsp
