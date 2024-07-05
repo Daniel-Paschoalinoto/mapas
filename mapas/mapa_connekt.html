@@ -73,7 +73,11 @@
             <span>(//app-textos-vaga)[1]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>Replace: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">Descrição da Vaga</button>            
+            <button class="processador" onclick="copiarTextoDoBotao(this)">Descrição da Vaga</button>/
+            <span class=textoProcessador>RegexReplace: </span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorDescricaoPonto)">Processador Padrão Ponto</button>
+            <span>⇄&nbsp</span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorDescricaoPontoReplace)">. </button>    
         </div>
     </div>
     <script src="../scripts.js"></script>

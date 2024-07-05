@@ -77,9 +77,17 @@
             <p>Avalie em mais vagas em qual section a empresa costuma preencher os detalhes da vaga</p>
             <span>//section[contains(.,'Requisitos')]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>RegexReplace: </span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorDescricaoPonto)">Processador Padrão Ponto</button>
+            <span>⇄&nbsp</span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorDescricaoPontoReplace)">. </button> 
             <p>ou</p>
             <span>//section[contains(.,'Descrição')]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>RegexReplace: </span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorDescricaoPonto)">Processador Padrão Ponto</button>
+            <span>⇄&nbsp</span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorDescricaoPontoReplace)">. </button>
         </div>
     </div>
     <script src="../scripts.js"></script>

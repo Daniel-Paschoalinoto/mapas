@@ -36,12 +36,16 @@
             <span class="destaque">Descrição</span>
             <span>//*[@class='box box-640 esquerda']//*[contains(@class,'box vaga')]//p[1]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>RegexReplace: </span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorDescricaoPonto)">Processador Padrão Ponto</button>
+            <span>⇄&nbsp</span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorDescricaoPontoReplace)">. </button>/
             <span class="textoProcessador">Replace: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">...</button>/
             <span class="textoProcessador">RegexReplace: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">^(.*)\.[^.]*$</button>
             <span>⇄&nbsp</span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">$1</button>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">$1</button><br><br>
             <span class="textoProcessador">e/ou RegexReplace: </span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">^(.*);[^;]*$</button>
             <span>⇄&nbsp</span>

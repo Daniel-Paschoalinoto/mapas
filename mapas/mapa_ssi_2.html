@@ -34,6 +34,10 @@
             <span class="destaque">Descrição</span>
             <span>//*[contains(@class,'resumo-vaga')]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>RegexReplace: </span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorDescricaoPonto)">Processador Padrão Ponto</button>
+            <span>⇄&nbsp</span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorDescricaoPontoReplace)">. </button>
         </div>
 
         <div id="cidade" class="conteudo">

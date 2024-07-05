@@ -97,10 +97,18 @@
             <p>Para trabalhe conosco, não inserir descrição padrão por hora devido as duplicidades.</p>
             <span>//*[@class="descriptionVacancy"][2]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>RegexReplace: </span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorDescricaoPonto)">Processador Padrão Ponto</button>
+            <span>⇄&nbsp</span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorDescricaoPontoReplace)">. </button>
             <p>ou</p>
             <p>Não inserir descrição padrão por hora, devido as duplicidades.</p>
             <span>//*[@class="job__description job__description2"]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>RegexReplace: </span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorDescricaoPonto)">Processador Padrão Ponto</button>
+            <span>⇄&nbsp</span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorDescricaoPontoReplace)">. </button>
         </div>
     </div>
     <script src="../scripts.js"></script>
