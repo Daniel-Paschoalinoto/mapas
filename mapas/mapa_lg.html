@@ -30,6 +30,17 @@
             <button class="processador" onclick="copiarTextoDoBotao(this)">Não Aplicável</button>
         </div>
 
+        <div id="descricao" class="conteudo">
+            <div id="descricao" class="conteudo">
+            <span class="destaque">Descrição</span>
+            <span>//*[@class="descricao-da-vaga"]/following-sibling::p[1]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>RegexReplace: </span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorDescricaoPonto)">Processador Padrão Ponto</button>
+            <span>⇄&nbsp</span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorDescricaoPontoReplace)">. </button>
+        </div>
+
         <div id="cidade" class="conteudo">
             <span class="destaque">Cidade</span>
             <p>Caso a empresa costume preencher a cidade em todas as vagas, inserir X-path</p>
@@ -61,18 +72,10 @@
 
         <div id="paginacao" class="conteudo">
             <span class="destaque">Paginação se necessária</span>
-            <p>Formato de paginação ainda não identificado, será criado quando necessário.</p>
-        </div>
-
-        <div id="descricao" class="conteudo">
-            <div id="descricao" class="conteudo">
-            <span class="destaque">Descrição (dentro de url_detalhe)</span>
-            <span>//*[@class="descricao-da-vaga"]/following-sibling::p[1]</span>
-            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
-            <span class=textoProcessador>RegexReplace: </span>
-            <button class="processador" onclick="copiarTermoPadrao(this, processadorDescricaoPonto)">Processador Padrão Ponto</button>
-            <span>⇄&nbsp</span>
-            <button class="processador" onclick="copiarTermoPadrao(this, processadorDescricaoPontoReplace)">. </button>
+            <span>Parâmetro de Paginação: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">&pagina=2</button><br>
+            <span class="textoProcessador">Url de Paginação ou Rota principal (exemplo): </span>
+            <span>https://prd-pc1.lg.com.br/Vagas/c/2352DB75-F65F-488D-9D48-ABF414775B60/p/Time_Top/pt-BR/Busca/Busca?termoDaBusca=</span>
         </div>
     </div>
     <script src="../scripts.js"></script>
