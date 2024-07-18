@@ -23,7 +23,7 @@
 
         <div id="titulo" class="conteudo">
             <span class="destaque">Título</span>
-            <span>//*[@id="vacancies"]//a/div/h3</span>
+            <span>//*[contains(@id, "vacancies")]//h3[1]/div[1]/text( )</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>RegexReplace: </span>
             <button class="processador" onclick="copiarTermoPadrao(this, processadorBanco)">Banco de Currículos</button>
