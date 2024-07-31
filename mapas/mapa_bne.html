@@ -94,21 +94,22 @@
 
         <div id="descricao" class="conteudo">
             <span class="destaque">Descrição (dentro de url_detalhe)</span>
-            <p>Para trabalhe conosco, não inserir descrição padrão por hora devido as duplicidades.</p>
             <span>//*[@class="descriptionVacancy"][2]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
-            <span class=textoProcessador>RegexReplace: </span>
-            <button class="processador" onclick="copiarTermoPadrao(this, processadorDescricaoPonto)">Processador Padrão Ponto</button>
-            <span>⇄&nbsp</span>
-            <button class="processador" onclick="copiarTermoPadrao(this, processadorDescricaoPontoReplace)">. </button>
             <p>ou</p>
-            <p>Não inserir descrição padrão por hora, devido as duplicidades.</p>
             <span>//*[@class="job__description job__description2"]</span>
-            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button><br><br>
             <span class=textoProcessador>RegexReplace: </span>
-            <button class="processador" onclick="copiarTermoPadrao(this, processadorDescricaoPonto)">Processador Padrão Ponto</button>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorIdentificarEspacos)">Tirar Espaços</button>/
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorRepeticoes)">Repetições</button>
             <span>⇄&nbsp</span>
-            <button class="processador" onclick="copiarTermoPadrao(this, processadorDescricaoPontoReplace)">. </button>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorRepeticoesReplace)">&nbsp</button>/
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorDescricaoPonto)">Ponto Espaço</button>
+            <span>⇄&nbsp</span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorDescricaoPontoReplace)">&nbsp</button>/
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorEspacoDepois)">Incluir Espaços</button>
+            <span>⇄&nbsp</span>
+            <button class="processador" onclick="copiarTermoPadrao(this, processadorEspacoDepoisReplace)">&nbsp</button>
         </div>
     </div>
     <script src="../scripts.js"></script>

@@ -1,8 +1,18 @@
 const processadorBanco = ".+(curr[ií]culo[s]?|talento[s]?).+"
 // const processadorBanco = "(.+Banco de currículos.+)|(.+banco de curriculos.+)|(.+baco de currículo.+)|(.+Banco de curriculo.+)|(.+banco de talentos.+)|(.+banco de talento.+)|(.+banco de Candidatos.+)|(.+banco de candidato.+)|(.+Banco de currículos)|(.+banco de curriculos)|(.+baco de currículo)|(.+Banco de curriculo)|(.+banco de talentos)|(.+banco de talento)|(.+banco de Candidatos)|(.+banco de candidato)|(Banco de currículos.+)|(banco de curriculos.+)|(baco de currículo.+)|(Banco de curriculo.+)|(banco de talentos.+)|(banco de talento.+)|(banco de Candidatos.+)|(banco de candidato.+)|(.+Banco de Currículos.+)|(.+VAGA BANCO.+)"
 const descricaoPadrao = "Atuará nas atividades internas e demais funções pertinentes ao cargo. Necessário conhecimento na área de atuação."
-const processadorDescricaoPonto = "\s*[—;|.•](?:\s*[—;|.•])*\s*"
+
+//Processadores
+const processadorIdentificarEspacos = "\\s+(?=[.!?;,:\-·/—•])|(?<=[.!?;,:\-·/—•])\\s+"
+
+const processadorRepeticoes = "([.!?;,:\\s-·•/])\\s*([.!?;,:\\s-·•/])+"
+const processadorRepeticoesReplace = "$1"
+
+const processadorDescricaoPonto = "\\s*[—;|.•](?:\\s*[—;|.•])*\\s*"
 const processadorDescricaoPontoReplace = ". "
+
+const processadorEspacoDepois = "[:?!,]"
+const processadorEspacoDepoisReplace = "$& "
 
 async function copiarElementoAnterior(button) {
     var elementoAnterior = button.previousElementSibling;
