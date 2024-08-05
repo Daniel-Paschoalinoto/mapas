@@ -94,7 +94,7 @@
 
         <div id="descricao" class="conteudo">
             <span class="destaque">Descrição (dentro de url_detalhe)</span>
-            <span>//*[@class="descriptionVacancy"][2]</span>
+            <span>//*[contains(text(),'Descrição Geral')]/following-sibling::h2[1]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <p>ou</p>
             <span>//*[@class="job__description job__description2"]</span>
