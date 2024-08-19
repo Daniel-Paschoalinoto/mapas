@@ -30,11 +30,41 @@
             <button class="processador" onclick="copiarTextoDoBotao(this)">Não Aplicável</button>
         </div>
 
+        <div id="cidade" class="conteudo">
+            <span class="destaque">Cidade</span>
+            <p>Caso a empresa costume preencher a cidade em todas as vagas, inserir X-path</p>
+            <span>//span[@title="Localidade"]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <!-- <div id="estado" class="conteudo">
+            <span class="destaque">Estado</span>
+            <span>//*[@class="header-location"]/p[2]</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>RegexMatch: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">-.+</button>/
+            <span class=textoProcessador>Replace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>
+        </div> -->
+
+        <div id="url_detalhe" class="conteudo">
+            <span class="destaque">Url_detalhe (click)</span>
+            <span>//*[@class="col-sm-12 vaga"]//h3</span>
+            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+        </div>
+
+        <div id="paginacao" class="conteudo">
+            <span class="destaque">Paginação se necessária</span>
+            <span>Parâmetro de Paginação: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">&pagina=2</button><br>
+            <span class="textoProcessador">Url de Paginação ou Rota principal (exemplo): </span>
+            <span>https://prd-pc1.lg.com.br/Vagas/c/2352DB75-F65F-488D-9D48-ABF414775B60/p/Time_Top/pt-BR/Busca/Busca?termoDaBusca=</span>
+        </div>
+
         <div id="descricao" class="conteudo">
             <div id="descricao" class="conteudo">
-            <span class="destaque">Descrição</span>
-            <span>//*[@class="descricao-da-vaga"]/following-sibling::p[1]</span>
-            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button><br><br>
+            <span class="destaque">Descrição: </span>
+            <p>Verifique se a melhor descrição está dentro do click ou fora, pois a cada mapa existem variações de campos e estrutura.</p>
             <span class=textoProcessador>RegexReplace: </span>
             <button class="processador" onclick="copiarTermoPadrao(this, processadorIdentificarEspacos)">Tirar Espaços</button>
             <span>⇄&nbsp</span>
@@ -51,43 +81,6 @@
             <button class="processador" onclick="copiarTermoPadrao(this, processadorIncluirPontoFinal)">Ponto Final</button>
             <span>⇄&nbsp</span>
             <button class="processador" onclick="copiarTermoPadrao(this, processadorIncluirPontoFinalReplace)">&nbsp</button>
-        </div>
-
-        <div id="cidade" class="conteudo">
-            <span class="destaque">Cidade</span>
-            <p>Caso a empresa costume preencher a cidade em todas as vagas, inserir X-path</p>
-            <span>//span[@title="Localidade"]</span>
-            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
-        </div>
-<!-- 
-        <div id="estado" class="conteudo">
-            <span class="destaque">Estado</span>
-            <span>//*[@class="header-location"]/p[2]</span>
-            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
-            <span class=textoProcessador>RegexMatch: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">-.+</button>/
-            <span class=textoProcessador>Replace: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">-</button>
-        </div> -->
-
-        <!-- <div id="url_detalhe" class="conteudo">
-            <span class="destaque">Url_detalhe (href)</span>
-            <span>//*[@class="fr_opportunity"]//h3/a</span>
-            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
-        </div> -->
-<!-- 
-        <div id="total_anuncios_site" class="conteudo">
-            <span class="destaque">Total_anuncios_site</span>
-            <span>//li[@class="active"]</span>
-            <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
-        </div> -->
-
-        <div id="paginacao" class="conteudo">
-            <span class="destaque">Paginação se necessária</span>
-            <span>Parâmetro de Paginação: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">&pagina=2</button><br>
-            <span class="textoProcessador">Url de Paginação ou Rota principal (exemplo): </span>
-            <span>https://prd-pc1.lg.com.br/Vagas/c/2352DB75-F65F-488D-9D48-ABF414775B60/p/Time_Top/pt-BR/Busca/Busca?termoDaBusca=</span>
         </div>
     </div>
     <script src="../scripts.js"></script>
