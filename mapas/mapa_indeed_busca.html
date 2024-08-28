@@ -19,8 +19,8 @@
             <span class="destaque">Root</span>
             <span>//*[@id='mosaic-jobResults']//*[contains(@class, 'job_seen_beacon')]</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
-            <span class=textoProcessador>RegexMatch: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">.+</button>.+Nome da Empresa<br>
+            <span class=textoProcessador>RegexReplace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">^(?!.*NOME DA EMPRESA).+$</button><br>
         </div>
 
         <div id="titulo" class="conteudo">
