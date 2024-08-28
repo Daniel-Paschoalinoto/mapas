@@ -16,24 +16,22 @@
         <a id=retornoLista href="../index.html">Lista de Mapas</a>
 
         <div id="root" class="conteudo">
-            <p>Caso no nome da empresa tenha termos genéricos como RH e a quantidade de páginas for alta demais omita o termo. Exemplo NONNA RH, o link deve ser https://www.catho.com.br/vagas/nonna/</p>
+            <p>Caso no nome da empresa tenha termos genéricos como RH e a quantidade de páginas for alta demais omita o termo. Exemplo NONNA RH, o url deve ser https://www.catho.com.br/vagas/nonna/</p>
             <span class="destaque">Root</span>
             <span>//*[@id="search-result"]//li</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
+            <span class=textoProcessador>RegexReplace: </span>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">^(?!.*NOME DA EMPRESA).+$</button><br>
         </div>
 
         <div id="titulo" class="conteudo">
             <span class="destaque">Título</span>
-            <span>//*[@id="search-result"]//header[1]/div[1]</span>
+            <span>///*[@id="search-result"]//h2</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>RegexReplace: </span>
             <button class="processador" onclick="copiarTermoPadrao(this, processadorBanco)">Banco de Currículos</button>
             <span>⇄&nbsp</span>
             <button class="processador" onclick="copiarTextoDoBotao(this)">Não Aplicável</button>
-            <p>Processador para evitar divulgar vagas de outras empresas.</p>
-            <span class=textoProcessador>RegexMatch: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">.+</button>.+Nome da Empresa<br>
-            <span class=textoProcessador>RegexReplace: </span>Nome da Empresa
         </div>
 
         <div id="cidade" class="conteudo">
