@@ -18,8 +18,7 @@ const processadorEspacoDepoisReplace = "$& "
 const processadorIncluirPontoFinal = "([^\\.\\s])$"
 const processadorIncluirPontoFinalReplace = "$1."
 
-const processadorEspecialComeco = "^[\\-\\.\"#@•*'`:!?–]+"
-
+const processadorEspecialComeco = "^[.-\"#@•*'`:!?–]+";
 
 async function copiarElementoAnterior(button) {
     var elementoAnterior = button.previousElementSibling;
