@@ -12,11 +12,13 @@ const processadorRepeticoesReplace = "$1"
 const processadorDescricaoPonto = "\\s*[—;|.•](?:\\s*[—;|.•])*\\s*"
 const processadorDescricaoPontoReplace = ". "
 
-const processadorEspacoDepois = "[:?!]"
+const processadorEspacoDepois = "[?!]"
 const processadorEspacoDepoisReplace = "$& "
 
 const processadorIncluirPontoFinal = "([^\\.\\s])$"
 const processadorIncluirPontoFinalReplace = "$1."
+
+const processadorEspecialComeco = "^[\\-\\.\"#@•*'`:?–]"
 
 
 async function copiarElementoAnterior(button) {
