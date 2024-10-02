@@ -20,18 +20,18 @@
             <span class="destaque">Root</span>
             <span>//*[@id="search-result"]//li</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
-            <span class=textoProcessador>RegexReplace: </span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">^(?!.*NOME DA EMPRESA).+$</button><br>
         </div>
 
         <div id="titulo" class="conteudo">
             <span class="destaque">Título</span>
-            <span>//*[@id="search-result"]//h2</span>
+            <span>//*[@id="search-result"]/ul/li/article/article/header/div</span>
             <button class="xPath" onclick="copiarElementoAnterior(this)">Copiar XPath</button>
             <span class=textoProcessador>RegexReplace: </span>
             <button class="processador" onclick="copiarTermoPadrao(this, processadorBanco)">Banco de Currículos</button>
             <span>⇄&nbsp</span>
-            <button class="processador" onclick="copiarTextoDoBotao(this)">Não Aplicável</button>
+            <button class="processador" onclick="copiarTextoDoBotao(this)">Não Aplicável</button><br><br>
+            <span class=textoProcessador>RegexMatch: </span>.+NOME DA EMPRESA/
+            <span class=textoProcessador>RegexReplace: </span>NOME DA EMPRESA
         </div>
 
         <div id="cidade" class="conteudo">
